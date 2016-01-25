@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  HBBTextField.h
 //  HBBBDBDJ
 //
-//  Created by HopeBayBridge on 16/1/16.
+//  Created by HopeBayBridge on 16/1/22.
 //  Copyright © 2016年 hopebaybridge. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HBBTextField : UITextField
 
 @end
-

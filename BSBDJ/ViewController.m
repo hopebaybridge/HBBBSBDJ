@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  BSBDJ
+//  HBBBDBDJ
 //
-//  Created by HopeBayBridge on 16/1/25.
+//  Created by HopeBayBridge on 16/1/16.
 //  Copyright © 2016年 hopebaybridge. All rights reserved.
 //
 
@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // 删除main.storyboard   后设置主窗口背景
+    self.view.backgroundColor = [UIColor redColor];
 }
 
 - (void)didReceiveMemoryWarning {

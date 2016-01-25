@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="category" id="KGk-i7-Jjw" customClass="HBBRecommandCategoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoS-O2-cja" userLabel="separateUIView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="kkk-2v-n3S"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66v-VZ-46h" userLabel="IndicatorUIView">
+                        <rect key="frame" x="0.0" y="0.0" width="5" height="0.0"/>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.01176470588" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="AZV-31-Wkg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="66v-VZ-46h" secondAttribute="bottom" id="2hU-XY-01H"/>
+                    <constraint firstItem="66v-VZ-46h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3LN-lY-lv0"/>
+                    <constraint firstItem="HoS-O2-cja" firstAttribute="top" secondItem="66v-VZ-46h" secondAttribute="bottom" id="GYc-1H-O9Y"/>
+                    <constraint firstItem="HoS-O2-cja" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ghg-gR-zY9"/>
+                    <constraint firstItem="HoS-O2-cja" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Kx4-mi-6Ea"/>
+                    <constraint firstAttribute="trailing" secondItem="HoS-O2-cja" secondAttribute="trailing" id="YJ7-fJ-q9W"/>
+                    <constraint firstItem="HoS-O2-cja" firstAttribute="bottom" secondItem="66v-VZ-46h" secondAttribute="bottom" id="fCL-xw-0sb"/>
+                    <constraint firstItem="66v-VZ-46h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fs7-1d-LX0"/>
+                    <constraint firstAttribute="bottom" secondItem="HoS-O2-cja" secondAttribute="bottom" id="ksc-0S-985"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="selectedIndicator" destination="66v-VZ-46h" id="gur-lk-EaD"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,37 @@
+//
+//  PrefixHeader.pch
+//  HBBBDBDJ
+//
+//  Created by HopeBayBridge on 16/1/16.
+//  Copyright © 2016年 hopebaybridge. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+HBBExtension.h"
+#import "UIBarButtonItem+HBBExtension.h"
+#import "HBBConst.h"
+#import "NSDate+HBBDateExtension.h"
+
+
+#ifdef DEBUG
+#   define HBBLog(...) NSLog(__VA_ARGS__)
+#else
+#   define HBBLog(...)
+#endif
+
+
+#define HBBFunc      HBBLog(@"%s",__func__)
+
+#define HBBRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define HBBGlobalBG HBBRGBColor(223,223,223)
+
+
+
+
+#endif /* PrefixHeader_pch */

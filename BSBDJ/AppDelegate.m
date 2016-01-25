@@ -1,12 +1,14 @@
 //
 //  AppDelegate.m
-//  BSBDJ
+//  HBBBDBDJ
 //
-//  Created by HopeBayBridge on 16/1/25.
+//  Created by HopeBayBridge on 16/1/16.
 //  Copyright © 2016年 hopebaybridge. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "HBBTabBarController.h"
+#import "HBBPushGuideView.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 创建窗口
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+    // 设置窗口根控制器
+    
+    HBBTabBarController *tabBarController = [[HBBTabBarController alloc] init];
+    
+    
+    self.window.rootViewController = tabBarController;
+    
+    // 显示窗口
+    [self.window makeKeyAndVisible];
+    
+    
+    // 显示推送引导
+    [HBBPushGuideView show];
+    
     return YES;
 }
 

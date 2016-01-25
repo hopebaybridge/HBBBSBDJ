@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HBBRecommandViewController">
+            <connections>
+                <outlet property="categoryTableView" destination="p6m-hd-3BW" id="xRR-y8-a4s"/>
+                <outlet property="recommandUserTableView" destination="QpA-x8-jnj" id="8YZ-bR-acy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p6m-hd-3BW" userLabel="左侧">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="2Ov-vg-wd1"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="NHa-cO-3Xo"/>
+                        <outlet property="delegate" destination="-1" id="x1W-h2-YoZ"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QpA-x8-jnj" userLabel="右侧">
+                    <rect key="frame" x="70" y="0.0" width="530" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="FxW-vc-Cba"/>
+                        <outlet property="delegate" destination="-1" id="oMT-Id-d8f"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="p6m-hd-3BW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6lE-Ng-sAn"/>
+                <constraint firstItem="QpA-x8-jnj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9vZ-IX-uyj"/>
+                <constraint firstAttribute="bottom" secondItem="p6m-hd-3BW" secondAttribute="bottom" id="Cho-Ut-6xd"/>
+                <constraint firstItem="p6m-hd-3BW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="UmQ-E0-QAA"/>
+                <constraint firstAttribute="bottom" secondItem="QpA-x8-jnj" secondAttribute="bottom" id="XOz-et-dl3"/>
+                <constraint firstAttribute="trailing" secondItem="QpA-x8-jnj" secondAttribute="trailing" id="dlT-Xe-nSy"/>
+                <constraint firstItem="QpA-x8-jnj" firstAttribute="leading" secondItem="p6m-hd-3BW" secondAttribute="trailing" id="vfY-mA-WT1"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
