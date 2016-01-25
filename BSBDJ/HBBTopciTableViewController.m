@@ -247,7 +247,12 @@ static NSString *const HBBTopicIdentifier = @"topic";
  *  @return <#return value description#>
  */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 300;
+    
+    // 取出帖子模型
+    HBBTopic *topic = self.topics[indexPath.row];
+    
+    // cell 高度封装到模型( cellheight)
+    return topic.cellHeight;
 }
 
 

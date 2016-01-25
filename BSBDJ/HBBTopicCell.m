@@ -29,6 +29,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;
 /** 评论 */
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
+/** 文字 */
+@property (weak, nonatomic) IBOutlet UILabel *text_label;
 @end
 
 @implementation HBBTopicCell
@@ -59,6 +61,10 @@
     [self setupBtn:self.caiBtn count:topic.cai placeholder:@"踩"];
     [self setupBtn:self.shareBtn count:topic.repost placeholder:@"分享"];
     [self setupBtn:self.commentBtn count:topic.comment placeholder:@"评论"];
+    
+    // 设置帖子的文字内容
+    self.text_label.text= topic.text;
+    
     
 }
 
@@ -105,12 +111,11 @@
  *  @param frame <#frame description#>
  */
 - (void)setFrame:(CGRect)frame{
-    static CGFloat margin = 10;
     
-    frame.origin.x = margin;
-    frame.size.width -= 2 * margin;
-    frame.size.height -= margin;
-    frame.origin.y += margin;
+    frame.origin.x = HBBTopicCellMargin;
+    frame.size.width -= 2 * HBBTopicCellMargin;
+    frame.size.height -= HBBTopicCellMargin;
+    frame.origin.y += HBBTopicCellMargin;
     
     [super setFrame:frame];
 }

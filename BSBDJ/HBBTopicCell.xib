@@ -21,13 +21,6 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aeb-WR-DNU" userLabel="头像">
-                        <rect key="frame" x="18" y="18" width="35" height="35"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="35" id="qor-MT-1eN"/>
-                            <constraint firstAttribute="width" constant="35" id="u7W-QA-fzm"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jJ-YF-fvC" userLabel="时间">
                         <rect key="frame" x="66" y="39" width="180" height="14"/>
                         <constraints>
@@ -48,7 +41,7 @@
                                 <state key="normal" title="顶" image="mainCellDing"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWz-5E-ctM" userLabel="cai">
-                                <rect key="frame" x="81" y="0.0" width="81" height="44"/>
+                                <rect key="frame" x="81" y="0.0" width="80.5" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="踩" image="mainCellCai"/>
@@ -64,7 +57,7 @@
                                 <state key="highlighted" image="mainCellShareClick"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7M-nV-LZo" userLabel="comment">
-                                <rect key="frame" x="242" y="0.0" width="81" height="44"/>
+                                <rect key="frame" x="242" y="0.0" width="80.5" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="评论" image="mainCellComment"/>
@@ -122,9 +115,23 @@
                         <state key="normal" backgroundImage="cellFollowIcon"/>
                         <state key="highlighted" backgroundImage="cellFollowClickIcon"/>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hF-0G-9ZX" userLabel="文字">
+                        <rect key="frame" x="10" y="63" width="303" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aeb-WR-DNU" userLabel="头像">
+                        <rect key="frame" x="18" y="18" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="qor-MT-1eN"/>
+                            <constraint firstAttribute="width" constant="35" id="u7W-QA-fzm"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="5jJ-YF-fvC" firstAttribute="leading" secondItem="aeb-WR-DNU" secondAttribute="trailing" constant="13" id="07S-eG-uG8"/>
+                    <constraint firstAttribute="trailing" secondItem="4hF-0G-9ZX" secondAttribute="trailing" constant="10" id="2Wu-C4-cqS"/>
                     <constraint firstAttribute="bottom" secondItem="mmN-Tb-1Vj" secondAttribute="bottom" constant="1" id="BFX-dt-jtK"/>
                     <constraint firstAttribute="bottom" secondItem="mmN-Tb-1Vj" secondAttribute="bottom" id="Bfk-bd-0as"/>
                     <constraint firstItem="mmN-Tb-1Vj" firstAttribute="top" secondItem="Xaa-0W-OCO" secondAttribute="bottom" id="DBu-ct-xH2"/>
@@ -136,6 +143,8 @@
                     <constraint firstItem="5jJ-YF-fvC" firstAttribute="trailing" secondItem="pZ2-Gq-N4o" secondAttribute="trailing" id="Wgx-OT-bwN"/>
                     <constraint firstItem="mmN-Tb-1Vj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Wp2-Zx-Xmr"/>
                     <constraint firstItem="mmN-Tb-1Vj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dDQ-c7-hI1"/>
+                    <constraint firstItem="4hF-0G-9ZX" firstAttribute="top" secondItem="aeb-WR-DNU" secondAttribute="bottom" constant="10" id="g6e-eA-SXT"/>
+                    <constraint firstItem="4hF-0G-9ZX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hYg-fe-pC1"/>
                     <constraint firstItem="5jJ-YF-fvC" firstAttribute="top" secondItem="pZ2-Gq-N4o" secondAttribute="bottom" constant="3" id="ha4-ci-17a"/>
                     <constraint firstAttribute="trailing" secondItem="mmN-Tb-1Vj" secondAttribute="trailing" id="kEe-Z7-8tq"/>
                     <constraint firstItem="pZ2-Gq-N4o" firstAttribute="top" secondItem="aeb-WR-DNU" secondAttribute="top" id="qEA-6c-AGe"/>
@@ -154,6 +163,7 @@
                 <outlet property="nameLabel" destination="pZ2-Gq-N4o" id="eAc-nU-vtI"/>
                 <outlet property="profileImageView" destination="aeb-WR-DNU" id="tXK-Zr-P3R"/>
                 <outlet property="shareBtn" destination="XY0-am-Tib" id="ibw-aS-gk3"/>
+                <outlet property="text_label" destination="4hF-0G-9ZX" id="hJa-Mb-r42"/>
             </connections>
             <point key="canvasLocation" x="225.5" y="211"/>
         </tableViewCell>

@@ -10,6 +10,11 @@
 
 @implementation HBBTopic
 
+{
+    CGFloat _cellHeight;
+    
+}
+
 - (NSString *)create_time{
     
     // 日期格式化
@@ -45,6 +50,23 @@
     }
     
     return  0;
+}
+
+
+- (CGFloat )cellHeight{
+    
+    if (!_cellHeight) {
+        // 文字的最大尺寸 (高度不限
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * HBBTopicCellMargin, MAXFLOAT);
+        
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+        
+        // cell 高度
+         _cellHeight = HBBTopicCellTextY + textH +HBBTopicCellBottomBarH + 2 * HBBTopicCellMargin;
+        
+    }
+    
+    return _cellHeight;
 }
 
 @end
