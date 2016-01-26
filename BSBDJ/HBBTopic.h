@@ -28,6 +28,17 @@
 @property (nonatomic,assign) NSInteger  comment;
 /** cell 的高度 */
 @property (nonatomic,assign,readonly) CGFloat cellHeight;
-
+/** 帖子的类型 */
+@property (nonatomic,assign)HBBTopicType type;
+/** 图片的宽度 */
+@property (nonatomic,assign) NSInteger width;
+/** 图片的高度 */
+@property (nonatomic,assign)NSInteger height;
+/**  小图片的 URL */
+@property (nonatomic,copy) NSString *small_image;
+/**  中图片的 URL  */
+@property (nonatomic,copy) NSString *middle_image;
+/**  大图片的 URL  */
+@property (nonatomic,copy) NSString *large_image;
 
 @end

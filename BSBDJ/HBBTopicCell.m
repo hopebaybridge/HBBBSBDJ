@@ -9,6 +9,7 @@
 #import "HBBTopicCell.h"
 #import "HBBTopic.h"
 #import <UIImageView+WebCache.h>
+#import "HBBTopicPictureView.h"
 
 
 @interface HBBTopicCell()
@@ -31,9 +32,25 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
 /** 文字 */
 @property (weak, nonatomic) IBOutlet UILabel *text_label;
+/**图片帖子的中间内容*/
+@property (nonatomic,weak)  HBBTopicPictureView *pictureView;
+
+
 @end
 
 @implementation HBBTopicCell
+
+
+
+- (HBBTopicPictureView *)pictureView{
+    if (!_pictureView) {
+        // 加载 xib
+        HBBTopicPictureView *pictureView = [HBBTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+       return _pictureView;
+}
 
 - (void)awakeFromNib {
     // Initialization code
@@ -64,6 +81,8 @@
     
     // 设置帖子的文字内容
     self.text_label.text= topic.text;
+    
+    
     
     
 }

@@ -7,6 +7,7 @@
 //
 
 #import "HBBTopic.h"
+#import <MJExtension.h>
 
 @implementation HBBTopic
 
@@ -14,6 +15,17 @@
     CGFloat _cellHeight;
     
 }
+
++ (NSDictionary *)replaceKeyFromPropertyName{
+    
+    return @{
+             @"small_image" : @"image0",
+             @"middle_image" : @"image2",
+             @"large_image" : @"image1",
+             };
+    
+}
+
 
 - (NSString *)create_time{
     
@@ -63,6 +75,24 @@
         
         // cell 高度
          _cellHeight = HBBTopicCellTextY + textH +HBBTopicCellBottomBarH + 2 * HBBTopicCellMargin;
+        
+        // 根据帖子的类型来计算 cell 的高度
+        if (self.type == HBBTopicTypePicture) {
+            // 图片帖子
+            // 图片显示的宽度
+            CGFloat picWidth = maxSize.width;
+            // 图片显示的高度
+            CGFloat picH =picWidth * self.height / self.width;
+            
+            // 计算控件的 frame
+            CGFloat picX = HBBTopicCellMargin;
+            CGFloat picY = HBBTopicCellTextY + textH + HBBTopicCellMargin;
+            
+            
+            _cellHeight += picH;
+            
+        }
+        
         
     }
     
