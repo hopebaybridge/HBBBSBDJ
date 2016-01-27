@@ -13,10 +13,11 @@
 
 {
     CGFloat _cellHeight;
+    CGRect _pictureViewFrame;
     
 }
 
-+ (NSDictionary *)replaceKeyFromPropertyName{
++ (NSDictionary *)replacedKeyFromPropertyName{
     
     return @{
              @"small_image" : @"image0",
@@ -74,7 +75,8 @@
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
         
         // cell 高度
-         _cellHeight = HBBTopicCellTextY + textH +HBBTopicCellBottomBarH + 2 * HBBTopicCellMargin;
+        // 文字的高度
+         _cellHeight = HBBTopicCellTextY + textH + HBBTopicCellMargin;
         
         // 根据帖子的类型来计算 cell 的高度
         if (self.type == HBBTopicTypePicture) {
@@ -82,18 +84,30 @@
             // 图片显示的宽度
             CGFloat picWidth = maxSize.width;
             // 图片显示的高度
-            CGFloat picH =picWidth * self.height / self.width;
+            CGFloat picHeight =picWidth * self.height / self.width;
+            
+            // 如果图片过长  将其改变为自定义的高度  400 
+            if (picHeight > HBBTopicCellPictureMaxHeight) {
+                picHeight = HBBTopicCellPictureCustomHeight;
+                self.bigPicture = YES; // 标识为大图
+            }
+            
+            
+            
             
             // 计算控件的 frame
             CGFloat picX = HBBTopicCellMargin;
             CGFloat picY = HBBTopicCellTextY + textH + HBBTopicCellMargin;
+            _pictureViewFrame = CGRectMake(picX, picY, picWidth, picHeight);
             
+            _cellHeight += picHeight + HBBTopicCellMargin;
             
-            _cellHeight += picH;
+        }else if(self.type == HBBTopicTypeVideo){
             
         }
         
-        
+        // 底部工具条的高度
+        _cellHeight  += HBBTopicCellBottomBarH + HBBTopicCellMargin;
     }
     
     return _cellHeight;

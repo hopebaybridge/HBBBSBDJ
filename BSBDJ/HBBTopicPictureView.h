@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class HBBTopic;
 
 @interface HBBTopicPictureView : UIView
 
 + (instancetype)pictureView;
+
+/** 帖子模型 */
+@property (nonatomic,strong)HBBTopic  *topic;
+
 
 @end

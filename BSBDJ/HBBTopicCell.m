@@ -41,7 +41,11 @@
 @implementation HBBTopicCell
 
 
-
+/**
+ *  懒加载图像信息     没有数据记在数据,有数据不在访问服务器
+ *
+ *  @return <#return value description#>
+ */
 - (HBBTopicPictureView *)pictureView{
     if (!_pictureView) {
         // 加载 xib
@@ -82,7 +86,19 @@
     // 设置帖子的文字内容
     self.text_label.text= topic.text;
     
-    
+    //根据帖子的类型添加对应的内容到 cell 中间(图片,声音,视频)
+    if(topic.type == HBBTopicTypePicture){
+        // 图片帖子
+        self.pictureView.topic = topic;
+        self.pictureView.frame = topic.pictureViewFrame;
+    }else if (topic.type == HBBTopicTypeVideo) {
+        
+        // 视频帖子
+            //self.voice
+    }else if (topic.type == HBBTopicTypeVoice) {
+        // 声音帖子
+          //      <#statements#>
+    }
     
     
 }

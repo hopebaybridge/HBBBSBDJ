@@ -49,6 +49,9 @@
 		4E4C90551C563C2C00FA9F53 /* HBBPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E4C90521C563C2C00FA9F53 /* HBBPushGuideView.xib */; };
 		4E4C90571C563C5800FA9F53 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E4C90561C563C5800FA9F53 /* Info.plist */; };
 		4E4C90591C563C6300FA9F53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4C90581C563C6300FA9F53 /* Assets.xcassets */; };
+		4EE3836F1C58AF69007ACF7B /* HBBProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE3836E1C58AF69007ACF7B /* HBBProgressView.m */; };
+		4EE3837B1C58BF57007ACF7B /* HBBShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE383791C58BF57007ACF7B /* HBBShowPictureViewController.m */; };
+		4EE3837C1C58BF57007ACF7B /* HBBShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE3837A1C58BF57007ACF7B /* HBBShowPictureViewController.xib */; };
 		4EEFB5C41C57281000C81D50 /* HBBTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFB5C31C57281000C81D50 /* HBBTopicPictureView.m */; };
 		4EEFB5C61C57282F00C81D50 /* HBBTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EEFB5C51C57282F00C81D50 /* HBBTopicPictureView.xib */; };
 		C3DBDA18316E5365057652EB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C30A6042B713FB68DF78ED6 /* libPods.a */; };
@@ -141,6 +144,11 @@
 		4E4C90561C563C5800FA9F53 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E4C90581C563C6300FA9F53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ECC98741C56412A0065878C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		4EE3836D1C58AF69007ACF7B /* HBBProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBProgressView.h; sourceTree = "<group>"; };
+		4EE3836E1C58AF69007ACF7B /* HBBProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBProgressView.m; sourceTree = "<group>"; };
+		4EE383781C58BF57007ACF7B /* HBBShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBShowPictureViewController.h; sourceTree = "<group>"; };
+		4EE383791C58BF57007ACF7B /* HBBShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBShowPictureViewController.m; sourceTree = "<group>"; };
+		4EE3837A1C58BF57007ACF7B /* HBBShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBBShowPictureViewController.xib; sourceTree = "<group>"; };
 		4EEFB5C21C57281000C81D50 /* HBBTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBTopicPictureView.h; sourceTree = "<group>"; };
 		4EEFB5C31C57281000C81D50 /* HBBTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBTopicPictureView.m; sourceTree = "<group>"; };
 		4EEFB5C51C57282F00C81D50 /* HBBTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBBTopicPictureView.xib; sourceTree = "<group>"; };
@@ -307,6 +315,8 @@
 				4EEFB5C21C57281000C81D50 /* HBBTopicPictureView.h */,
 				4EEFB5C31C57281000C81D50 /* HBBTopicPictureView.m */,
 				4EEFB5C51C57282F00C81D50 /* HBBTopicPictureView.xib */,
+				4EE3836D1C58AF69007ACF7B /* HBBProgressView.h */,
+				4EE3836E1C58AF69007ACF7B /* HBBProgressView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -320,6 +330,9 @@
 				4E4C8FED1C5639A100FA9F53 /* HBBRecommandTagsViewController.m */,
 				4E4C8FEE1C5639A100FA9F53 /* HBBTopciTableViewController.h */,
 				4E4C8FEF1C5639A100FA9F53 /* HBBTopciTableViewController.m */,
+				4EE383781C58BF57007ACF7B /* HBBShowPictureViewController.h */,
+				4EE383791C58BF57007ACF7B /* HBBShowPictureViewController.m */,
+				4EE3837A1C58BF57007ACF7B /* HBBShowPictureViewController.xib */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -573,6 +586,7 @@
 				4E4C90101C563A4300FA9F53 /* HBBFriendTrendsViewController.xib in Resources */,
 				4E4C90221C563A5600FA9F53 /* HBBRecommandUserTableViewCell.xib in Resources */,
 				4E4C8FFA1C5639BE00FA9F53 /* HBBRecommandTagCell.xib in Resources */,
+				4EE3837C1C58BF57007ACF7B /* HBBShowPictureViewController.xib in Resources */,
 				4E4C90141C563A4300FA9F53 /* HBBLoginRegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,9 +658,11 @@
 				4E4C900F1C563A4300FA9F53 /* HBBFriendTrendsViewController.m in Sources */,
 				4E4C90401C563C0A00FA9F53 /* UIBarButtonItem+HBBExtension.m in Sources */,
 				4E4C90211C563A5600FA9F53 /* HBBRecommandUserTableViewCell.m in Sources */,
+				4EE3836F1C58AF69007ACF7B /* HBBProgressView.m in Sources */,
 				4E4C90231C563A5600FA9F53 /* HBBVerticalButton.m in Sources */,
 				4E4C902A1C563A8100FA9F53 /* HBBRecommandUser.m in Sources */,
 				4E4C904A1C563C1B00FA9F53 /* HBBTestViewController.m in Sources */,
+				4EE3837B1C58BF57007ACF7B /* HBBShowPictureViewController.m in Sources */,
 				4E4C8FFB1C5639BE00FA9F53 /* HBBTopicCell.m in Sources */,
 				4E4C904B1C563C1B00FA9F53 /* ViewController.m in Sources */,
 				4E4C90531C563C2C00FA9F53 /* HBBTabBar.m in Sources */,

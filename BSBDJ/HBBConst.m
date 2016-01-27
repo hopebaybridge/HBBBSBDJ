@@ -25,3 +25,9 @@ CGFloat const HBBTopicCellTextY = 55;
 
 /**  精华 - cell 底部工具条的高度 */
 CGFloat const HBBTopicCellBottomBarH = 44;
+
+/**  精华 - cell - 图片帖子的最大高度 */
+CGFloat const HBBTopicCellPictureMaxHeight  = 800;
+
+/**  精华 - cell - 图片帖子的超出最大高度后定义的高度 */
+CGFloat const HBBTopicCellPictureCustomHeight  = 260;

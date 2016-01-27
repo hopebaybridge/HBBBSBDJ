@@ -39,3 +39,9 @@ UIKIT_EXTERN CGFloat const HBBTopicCellTextY ;
 
 /**  精华 - cell 底部工具条的高度 */
 UIKIT_EXTERN CGFloat const HBBTopicCellBottomBarH ;
+
+/**  精华 - cell - 图片帖子的最大高度 */
+UIKIT_EXTERN CGFloat const HBBTopicCellPictureMaxHeight ;
+
+/**  精华 - cell - 图片帖子的超出最大高度后定义的高度 */
+UIKIT_EXTERN CGFloat const HBBTopicCellPictureCustomHeight;
