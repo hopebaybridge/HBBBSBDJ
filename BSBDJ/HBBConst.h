@@ -45,3 +45,13 @@ UIKIT_EXTERN CGFloat const HBBTopicCellPictureMaxHeight ;
 
 /**  精华 - cell - 图片帖子的超出最大高度后定义的高度 */
 UIKIT_EXTERN CGFloat const HBBTopicCellPictureCustomHeight;
+
+
+/**  精华 - User - 模型性别*/
+UIKIT_EXTERN  NSString *const HBBUserSexMale;
+UIKIT_EXTERN  NSString *const HBBUserSexFeMale;
+
+
+
+/** 精华 cell 最热评论标题的高度*/
+UIKIT_EXTERN CGFloat const HBBTopicCellTopicCmtTitleH ;

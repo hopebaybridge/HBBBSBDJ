@@ -8,12 +8,14 @@
 
 #import "HBBTopic.h"
 #import <MJExtension.h>
+#import "HBBUser.h"
+#import "HBBComment.h"
 
 @implementation HBBTopic
 
 {
     CGFloat _cellHeight;
-    CGRect _pictureViewFrame;
+//    CGRect _pictureViewFrame;
     
 }
 
@@ -23,19 +25,25 @@
              @"small_image" : @"image0",
              @"middle_image" : @"image2",
              @"large_image" : @"image1",
+             @"ID":@"id"
              };
     
 }
 
++ (NSDictionary *)objectClassInArray{
+    //return @{@"top_cmt":[HBBComment class]};
+    return @{@"top_cmt": @"HBBComment"};
+}
 
-- (NSString *)create_time{
+
+- (NSString *)passtime{
     
     // 日期格式化
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     // 设置日期格式
     fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     // 帖子的创建时间
-    NSDate *createDate = [fmt dateFromString:_create_time];
+    NSDate *createDate = [fmt dateFromString:_passtime];
     
     if (createDate.isThisYear) { // 今年
         if(createDate.isToday){ // 今天
@@ -59,7 +67,7 @@
         }
        
     } else {
-        return _create_time;
+        return _passtime;
     }
     
     return  0;
@@ -102,8 +110,38 @@
             
             _cellHeight += picHeight + HBBTopicCellMargin;
             
-        }else if(self.type == HBBTopicTypeVideo){
+        }else if(self.type == HBBTopicTypeVoice){
             
+            CGFloat voiceX = HBBTopicCellMargin;
+            CGFloat voiceY = HBBTopicCellTextY + textH + HBBTopicCellMargin;
+            CGFloat voiceWidth = maxSize.width;
+            CGFloat voiceHeight = voiceWidth * self.height / self.width;
+            
+            _voiceViewFrame = CGRectMake(voiceX, voiceY, voiceWidth, voiceHeight);
+            
+            _cellHeight += voiceHeight + HBBTopicCellMargin;
+            
+            
+        }else if(self.type ==HBBTopicTypeVideo){
+            
+            CGFloat videoX = HBBTopicCellMargin;
+            CGFloat videoY = HBBTopicCellTextY + textH + HBBTopicCellMargin;
+            CGFloat videoWidth = maxSize.width;
+            CGFloat videoHeight = videoWidth * self.height / self.width;
+            
+            _videoViewFrame = CGRectMake(videoX, videoY, videoWidth, videoHeight);
+            
+            _cellHeight += videoHeight + HBBTopicCellMargin;
+            
+            
+        }
+        
+        // 如果有最热评论
+        HBBComment *cmt  = [self.top_cmt firstObject];
+        if (cmt) {
+            NSString *content  = [NSString stringWithFormat:@"%@ : %@",cmt.user.username ,cmt.content];
+            CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil].size.height;
+            _cellHeight += HBBTopicCellTopicCmtTitleH + contentH + 6 * HBBTopicCellMargin;
         }
         
         // 底部工具条的高度

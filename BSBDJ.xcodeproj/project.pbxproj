@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E382B861C5DE4C7006AF8F3 /* HBBTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E382B851C5DE4C7006AF8F3 /* HBBTopicVoiceView.m */; };
+		4E382B881C5DE4E1006AF8F3 /* HBBTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E382B871C5DE4E1006AF8F3 /* HBBTopicVoiceView.xib */; };
+		4E382B8B1C5E0541006AF8F3 /* HBBTopicVedioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E382B8A1C5E0541006AF8F3 /* HBBTopicVedioView.m */; };
+		4E382B8D1C5E0581006AF8F3 /* HBBTopicVedioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E382B8C1C5E0581006AF8F3 /* HBBTopicVedioView.xib */; };
 		4E4C8FC81C56374A00FA9F53 /* BSBDJTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C8FC71C56374A00FA9F53 /* BSBDJTests.m */; };
 		4E4C8FF01C5639A100FA9F53 /* HBBEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C8FEB1C5639A100FA9F53 /* HBBEssenceViewController.m */; };
 		4E4C8FF11C5639A100FA9F53 /* HBBRecommandTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C8FED1C5639A100FA9F53 /* HBBRecommandTagsViewController.m */; };
@@ -49,9 +53,16 @@
 		4E4C90551C563C2C00FA9F53 /* HBBPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E4C90521C563C2C00FA9F53 /* HBBPushGuideView.xib */; };
 		4E4C90571C563C5800FA9F53 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E4C90561C563C5800FA9F53 /* Info.plist */; };
 		4E4C90591C563C6300FA9F53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4C90581C563C6300FA9F53 /* Assets.xcassets */; };
+		4E54ACDA1C605504007C8AA3 /* HBBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54ACD91C605504007C8AA3 /* HBBUser.m */; };
+		4E54ACDD1C6059B8007C8AA3 /* HBBComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54ACDC1C6059B8007C8AA3 /* HBBComment.m */; };
+		4E54ACE11C608D30007C8AA3 /* HBBCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54ACDF1C608D30007C8AA3 /* HBBCommentViewController.m */; };
+		4E54ACE21C608D30007C8AA3 /* HBBCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E54ACE01C608D30007C8AA3 /* HBBCommentViewController.xib */; };
+		4E7E06C21C61FC6C00E0BDD3 /* HBBCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E06C11C61FC6C00E0BDD3 /* HBBCommentHeaderView.m */; };
 		4EE3836F1C58AF69007ACF7B /* HBBProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE3836E1C58AF69007ACF7B /* HBBProgressView.m */; };
 		4EE3837B1C58BF57007ACF7B /* HBBShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE383791C58BF57007ACF7B /* HBBShowPictureViewController.m */; };
 		4EE3837C1C58BF57007ACF7B /* HBBShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE3837A1C58BF57007ACF7B /* HBBShowPictureViewController.xib */; };
+		4EE383801C59084B007ACF7B /* HBBPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE3837E1C59084B007ACF7B /* HBBPublishViewController.m */; };
+		4EE383811C59084B007ACF7B /* HBBPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE3837F1C59084B007ACF7B /* HBBPublishViewController.xib */; };
 		4EEFB5C41C57281000C81D50 /* HBBTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFB5C31C57281000C81D50 /* HBBTopicPictureView.m */; };
 		4EEFB5C61C57282F00C81D50 /* HBBTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EEFB5C51C57282F00C81D50 /* HBBTopicPictureView.xib */; };
 		C3DBDA18316E5365057652EB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C30A6042B713FB68DF78ED6 /* libPods.a */; };
@@ -69,6 +80,12 @@
 
 /* Begin PBXFileReference section */
 		4DF5DC70CE20BF3E68AC1B89 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4E382B841C5DE4C7006AF8F3 /* HBBTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBTopicVoiceView.h; sourceTree = "<group>"; };
+		4E382B851C5DE4C7006AF8F3 /* HBBTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBTopicVoiceView.m; sourceTree = "<group>"; };
+		4E382B871C5DE4E1006AF8F3 /* HBBTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBBTopicVoiceView.xib; sourceTree = "<group>"; };
+		4E382B891C5E0541006AF8F3 /* HBBTopicVedioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBTopicVedioView.h; sourceTree = "<group>"; };
+		4E382B8A1C5E0541006AF8F3 /* HBBTopicVedioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBTopicVedioView.m; sourceTree = "<group>"; };
+		4E382B8C1C5E0581006AF8F3 /* HBBTopicVedioView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBBTopicVedioView.xib; sourceTree = "<group>"; };
 		4E4C8FAA1C56374A00FA9F53 /* BSBDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSBDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4C8FC31C56374A00FA9F53 /* BSBDJTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BSBDJTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4C8FC71C56374A00FA9F53 /* BSBDJTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSBDJTests.m; sourceTree = "<group>"; };
@@ -143,12 +160,24 @@
 		4E4C90521C563C2C00FA9F53 /* HBBPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBBPushGuideView.xib; sourceTree = "<group>"; };
 		4E4C90561C563C5800FA9F53 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E4C90581C563C6300FA9F53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E54ACD81C605504007C8AA3 /* HBBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBUser.h; sourceTree = "<group>"; };
+		4E54ACD91C605504007C8AA3 /* HBBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBUser.m; sourceTree = "<group>"; };
+		4E54ACDB1C6059B8007C8AA3 /* HBBComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBComment.h; sourceTree = "<group>"; };
+		4E54ACDC1C6059B8007C8AA3 /* HBBComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBComment.m; sourceTree = "<group>"; };
+		4E54ACDE1C608D30007C8AA3 /* HBBCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBCommentViewController.h; sourceTree = "<group>"; };
+		4E54ACDF1C608D30007C8AA3 /* HBBCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBCommentViewController.m; sourceTree = "<group>"; };
+		4E54ACE01C608D30007C8AA3 /* HBBCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBBCommentViewController.xib; sourceTree = "<group>"; };
+		4E7E06C01C61FC6C00E0BDD3 /* HBBCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBCommentHeaderView.h; sourceTree = "<group>"; };
+		4E7E06C11C61FC6C00E0BDD3 /* HBBCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBCommentHeaderView.m; sourceTree = "<group>"; };
 		4ECC98741C56412A0065878C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4EE3836D1C58AF69007ACF7B /* HBBProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBProgressView.h; sourceTree = "<group>"; };
 		4EE3836E1C58AF69007ACF7B /* HBBProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBProgressView.m; sourceTree = "<group>"; };
 		4EE383781C58BF57007ACF7B /* HBBShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBShowPictureViewController.h; sourceTree = "<group>"; };
 		4EE383791C58BF57007ACF7B /* HBBShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBShowPictureViewController.m; sourceTree = "<group>"; };
 		4EE3837A1C58BF57007ACF7B /* HBBShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBBShowPictureViewController.xib; sourceTree = "<group>"; };
+		4EE3837D1C59084B007ACF7B /* HBBPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBPublishViewController.h; sourceTree = "<group>"; };
+		4EE3837E1C59084B007ACF7B /* HBBPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBPublishViewController.m; sourceTree = "<group>"; };
+		4EE3837F1C59084B007ACF7B /* HBBPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBBPublishViewController.xib; sourceTree = "<group>"; };
 		4EEFB5C21C57281000C81D50 /* HBBTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBTopicPictureView.h; sourceTree = "<group>"; };
 		4EEFB5C31C57281000C81D50 /* HBBTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBTopicPictureView.m; sourceTree = "<group>"; };
 		4EEFB5C51C57282F00C81D50 /* HBBTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBBTopicPictureView.xib; sourceTree = "<group>"; };
@@ -299,6 +328,10 @@
 				4E4C8FFE1C5639CE00FA9F53 /* HBBRecommandTag.m */,
 				4E4C8FFF1C5639CE00FA9F53 /* HBBTopic.h */,
 				4E4C90001C5639CE00FA9F53 /* HBBTopic.m */,
+				4E54ACD81C605504007C8AA3 /* HBBUser.h */,
+				4E54ACD91C605504007C8AA3 /* HBBUser.m */,
+				4E54ACDB1C6059B8007C8AA3 /* HBBComment.h */,
+				4E54ACDC1C6059B8007C8AA3 /* HBBComment.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -312,11 +345,19 @@
 				4E4C8FF61C5639BE00FA9F53 /* HBBTopicCell.h */,
 				4E4C8FF71C5639BE00FA9F53 /* HBBTopicCell.m */,
 				4E4C8FF81C5639BE00FA9F53 /* HBBTopicCell.xib */,
+				4EE3836D1C58AF69007ACF7B /* HBBProgressView.h */,
+				4EE3836E1C58AF69007ACF7B /* HBBProgressView.m */,
 				4EEFB5C21C57281000C81D50 /* HBBTopicPictureView.h */,
 				4EEFB5C31C57281000C81D50 /* HBBTopicPictureView.m */,
 				4EEFB5C51C57282F00C81D50 /* HBBTopicPictureView.xib */,
-				4EE3836D1C58AF69007ACF7B /* HBBProgressView.h */,
-				4EE3836E1C58AF69007ACF7B /* HBBProgressView.m */,
+				4E382B841C5DE4C7006AF8F3 /* HBBTopicVoiceView.h */,
+				4E382B851C5DE4C7006AF8F3 /* HBBTopicVoiceView.m */,
+				4E382B871C5DE4E1006AF8F3 /* HBBTopicVoiceView.xib */,
+				4E382B891C5E0541006AF8F3 /* HBBTopicVedioView.h */,
+				4E382B8A1C5E0541006AF8F3 /* HBBTopicVedioView.m */,
+				4E382B8C1C5E0581006AF8F3 /* HBBTopicVedioView.xib */,
+				4E7E06C01C61FC6C00E0BDD3 /* HBBCommentHeaderView.h */,
+				4E7E06C11C61FC6C00E0BDD3 /* HBBCommentHeaderView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -333,6 +374,9 @@
 				4EE383781C58BF57007ACF7B /* HBBShowPictureViewController.h */,
 				4EE383791C58BF57007ACF7B /* HBBShowPictureViewController.m */,
 				4EE3837A1C58BF57007ACF7B /* HBBShowPictureViewController.xib */,
+				4E54ACDE1C608D30007C8AA3 /* HBBCommentViewController.h */,
+				4E54ACDF1C608D30007C8AA3 /* HBBCommentViewController.m */,
+				4E54ACE01C608D30007C8AA3 /* HBBCommentViewController.xib */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -457,6 +501,9 @@
 				4E4C90471C563C1B00FA9F53 /* HBBTabBarController.m */,
 				4E4C90481C563C1B00FA9F53 /* HBBNavigationController.h */,
 				4E4C90491C563C1B00FA9F53 /* HBBNavigationController.m */,
+				4EE3837D1C59084B007ACF7B /* HBBPublishViewController.h */,
+				4EE3837E1C59084B007ACF7B /* HBBPublishViewController.m */,
+				4EE3837F1C59084B007ACF7B /* HBBPublishViewController.xib */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -538,6 +585,7 @@
 		4E4C8FA21C56374A00FA9F53 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HBB;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = hopebaybridge;
 				TargetAttributes = {
@@ -584,9 +632,13 @@
 				4E4C90591C563C6300FA9F53 /* Assets.xcassets in Resources */,
 				4E4C8FFC1C5639BE00FA9F53 /* HBBTopicCell.xib in Resources */,
 				4E4C90101C563A4300FA9F53 /* HBBFriendTrendsViewController.xib in Resources */,
+				4E382B8D1C5E0581006AF8F3 /* HBBTopicVedioView.xib in Resources */,
 				4E4C90221C563A5600FA9F53 /* HBBRecommandUserTableViewCell.xib in Resources */,
 				4E4C8FFA1C5639BE00FA9F53 /* HBBRecommandTagCell.xib in Resources */,
+				4E54ACE21C608D30007C8AA3 /* HBBCommentViewController.xib in Resources */,
+				4E382B881C5DE4E1006AF8F3 /* HBBTopicVoiceView.xib in Resources */,
 				4EE3837C1C58BF57007ACF7B /* HBBShowPictureViewController.xib in Resources */,
+				4EE383811C59084B007ACF7B /* HBBPublishViewController.xib in Resources */,
 				4E4C90141C563A4300FA9F53 /* HBBLoginRegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,7 +706,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E4C90351C563BFB00FA9F53 /* AppDelegate.m in Sources */,
+				4E54ACDA1C605504007C8AA3 /* HBBUser.m in Sources */,
 				4E4C90021C5639CE00FA9F53 /* HBBTopic.m in Sources */,
+				4E54ACE11C608D30007C8AA3 /* HBBCommentViewController.m in Sources */,
+				4E382B861C5DE4C7006AF8F3 /* HBBTopicVoiceView.m in Sources */,
 				4E4C900F1C563A4300FA9F53 /* HBBFriendTrendsViewController.m in Sources */,
 				4E4C90401C563C0A00FA9F53 /* UIBarButtonItem+HBBExtension.m in Sources */,
 				4E4C90211C563A5600FA9F53 /* HBBRecommandUserTableViewCell.m in Sources */,
@@ -662,11 +717,13 @@
 				4E4C90231C563A5600FA9F53 /* HBBVerticalButton.m in Sources */,
 				4E4C902A1C563A8100FA9F53 /* HBBRecommandUser.m in Sources */,
 				4E4C904A1C563C1B00FA9F53 /* HBBTestViewController.m in Sources */,
+				4E7E06C21C61FC6C00E0BDD3 /* HBBCommentHeaderView.m in Sources */,
 				4EE3837B1C58BF57007ACF7B /* HBBShowPictureViewController.m in Sources */,
 				4E4C8FFB1C5639BE00FA9F53 /* HBBTopicCell.m in Sources */,
 				4E4C904B1C563C1B00FA9F53 /* ViewController.m in Sources */,
 				4E4C90531C563C2C00FA9F53 /* HBBTabBar.m in Sources */,
 				4E4C8FF91C5639BE00FA9F53 /* HBBRecommandTagCell.m in Sources */,
+				4EE383801C59084B007ACF7B /* HBBPublishViewController.m in Sources */,
 				4E4C90371C563BFB00FA9F53 /* Foundation+Log.m in Sources */,
 				4E4C90051C563A2100FA9F53 /* HBBNewViewController.m in Sources */,
 				4E4C904D1C563C1B00FA9F53 /* HBBNavigationController.m in Sources */,
@@ -676,6 +733,7 @@
 				4EEFB5C41C57281000C81D50 /* HBBTopicPictureView.m in Sources */,
 				4E4C904C1C563C1B00FA9F53 /* HBBTabBarController.m in Sources */,
 				4E4C8FF11C5639A100FA9F53 /* HBBRecommandTagsViewController.m in Sources */,
+				4E54ACDD1C6059B8007C8AA3 /* HBBComment.m in Sources */,
 				4E4C902D1C563A9700FA9F53 /* HBBMeViewController.m in Sources */,
 				4E4C90411C563C0A00FA9F53 /* NSDate+HBBDateExtension.m in Sources */,
 				4E4C90131C563A4300FA9F53 /* HBBLoginRegisterViewController.m in Sources */,
@@ -685,6 +743,7 @@
 				4E4C90241C563A5600FA9F53 /* HBBTextField.m in Sources */,
 				4E4C901F1C563A5600FA9F53 /* HBBRecommandCategoryCell.m in Sources */,
 				4E4C90381C563BFB00FA9F53 /* main.m in Sources */,
+				4E382B8B1C5E0541006AF8F3 /* HBBTopicVedioView.m in Sources */,
 				4E4C90291C563A8100FA9F53 /* HBBRecommandCategory.m in Sources */,
 				4E4C90541C563C2C00FA9F53 /* HBBPushGuideView.m in Sources */,
 			);

@@ -7,7 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HBBShowPictureViewController">
             <connections>
+                <outlet property="backBtn" destination="0ou-2T-16P" id="Gba-C4-tuW"/>
                 <outlet property="progressView" destination="tdK-6t-R6H" id="qjb-cR-0ZI"/>
+                <outlet property="repostBtn" destination="LGM-cL-Ajs" id="okp-jl-8pY"/>
+                <outlet property="saveBtn" destination="92v-Sm-643" id="YMQ-0q-Viu"/>
                 <outlet property="scollView" destination="yE5-V3-D9m" id="moB-Pd-3g3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

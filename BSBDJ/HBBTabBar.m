@@ -7,6 +7,7 @@
 //
 
 #import "HBBTabBar.h"
+#import "HBBPublishViewController.h"
 
 @interface HBBTabBar()
 /**
@@ -27,12 +28,18 @@
         
         [publishBtn setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [publishBtn setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
+        [publishBtn addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
         
         [self addSubview:publishBtn];
         self.publishBtn = publishBtn;
 
     }
     return  self;
+}
+
+-(void)publishClick{
+    HBBPublishViewController *publishVC = [[HBBPublishViewController alloc] init];
+    [[UIApplication sharedApplication ].keyWindow.rootViewController presentViewController:publishVC animated:NO completion:nil];
 }
 
 - (void)layoutSubviews{

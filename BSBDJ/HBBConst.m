@@ -31,3 +31,10 @@ CGFloat const HBBTopicCellPictureMaxHeight  = 800;
 
 /**  精华 - cell - 图片帖子的超出最大高度后定义的高度 */
 CGFloat const HBBTopicCellPictureCustomHeight  = 260;
+
+/**  精华 - User - 模型性别*/
+NSString *const HBBUserSexMale = @"m";
+NSString *const HBBUserSexFeMale = @"f";
+
+/** 精华 cell 最热评论标题的高度*/
+CGFloat const HBBTopicCellTopicCmtTitleH  = 20;

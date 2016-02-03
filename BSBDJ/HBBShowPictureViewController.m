@@ -21,6 +21,9 @@
 /** 图片显示位置*/
 @property (nonatomic,weak)  UIImageView *imageView;
 
+@property (weak, nonatomic) IBOutlet UIButton *backBtn;
+@property (weak, nonatomic) IBOutlet UIButton *repostBtn;
+@property (weak, nonatomic) IBOutlet UIButton *saveBtn;
 
 @end
 
@@ -41,6 +44,9 @@
     // 注册图片的点击事件 点击图片返回
     [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)]];
     [self.scollView addSubview:imageView];
+    [self.scollView addSubview:self.backBtn];
+    [self.scollView addSubview:self.repostBtn];
+    [self.scollView addSubview:self.saveBtn];
     self.imageView = imageView;
     
     // 图片的尺寸

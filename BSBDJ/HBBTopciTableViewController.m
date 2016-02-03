@@ -11,6 +11,7 @@
 #import "HBBTopciTableViewController.h"
 #import "HBBTopic.h"
 #import "HBBTopicCell.h"
+#import "HBBCommentViewController.h"
 #import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
 #import <MJExtension.h>
@@ -129,14 +130,14 @@ static NSString *const HBBTopicIdentifier = @"topic";
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         HBBLog(@"%@",downloadProgress);
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    } success:^(NSURLSessionDataTask *  task, id  responseObject) {
         
         // 网络请求迟缓  请求会一直执行  网络请求时的 params  与记录的 params不同
         if(self.params != params) return ;
         
         // 存储 maxtime  用于访问下一页使用
         self.maxtime = responseObject[@"info"][@"maxtime"];
-        
+    
         // 转换数据模型  添加新的数据
         NSArray *newTopics = [HBBTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.topics addObjectsFromArray:newTopics];
@@ -175,6 +176,7 @@ static NSString *const HBBTopicIdentifier = @"topic";
         HBBLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
+       HBBLog(@"%@",responseObject);
         
         // 网络请求迟缓  请求会一直执行  网络请求时的 params  与记录的 params不同
         if(self.params != params) return ;
@@ -186,6 +188,8 @@ static NSString *const HBBTopicIdentifier = @"topic";
         // 转换数据模型
         self.topics = [HBBTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.tableView reloadData];
+        
+        
         
         // [responseObject writeToFile:@"/Users/sunqiaojin/Desktop/duanzi.plist" atomically:YES];
         // 结束数据的刷新
@@ -251,8 +255,23 @@ static NSString *const HBBTopicIdentifier = @"topic";
     // 取出帖子模型
     HBBTopic *topic = self.topics[indexPath.row];
     
+
+    
     // cell 高度封装到模型( cellheight)
     return topic.cellHeight;
+}
+
+/**
+ *  选中指定 cell 发生的事件
+ *
+ *  @param tableView <#tableView description#>
+ *  @param indexPath <#indexPath description#>
+ */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    HBBCommentViewController *commentVC = [[HBBCommentViewController alloc] init];
+    
+    commentVC.topic = self.topics[indexPath.row];
+    [self.navigationController pushViewController:commentVC animated:YES];
 }
 
 

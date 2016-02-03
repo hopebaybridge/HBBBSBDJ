@@ -22,7 +22,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="300" height="252"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" highlightedImage="common-gif" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oOZ-RY-Ged">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oOZ-RY-Ged">
                     <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="31" id="37v-ZR-BwE"/>
