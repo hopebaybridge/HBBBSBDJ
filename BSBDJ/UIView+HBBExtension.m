@@ -82,4 +82,25 @@
     return self.frame.origin.y;
 }
 
+
+/**
+ *  判断指定的控件是否在主窗口(能见)
+ *
+ *  @return <#return value description#>
+ */
+- (BOOL)isShowingOnKeyWindow{
+    // 主窗口
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    
+    // 以主窗口左上角为坐标原点,计算 self的矩形框
+    CGRect newFrame = [keyWindow convertRect:self.frame fromView:self.superview];
+    CGRect winBounds = keyWindow.bounds;
+    
+    // 主窗口的 bounds 和 self 的矩形框是否有重叠
+    BOOL intersects = CGRectIntersectsRect(newFrame, winBounds);
+    
+    // 没有隐藏    透明度大于0.01 可见   是主窗口   有交叉
+    return  !self.isHidden && self.alpha > 0.01 && self.window == keyWindow && intersects ;
+}
+
 @end

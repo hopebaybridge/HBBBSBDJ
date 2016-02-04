@@ -57,6 +57,7 @@
 		4E54ACDD1C6059B8007C8AA3 /* HBBComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54ACDC1C6059B8007C8AA3 /* HBBComment.m */; };
 		4E54ACE11C608D30007C8AA3 /* HBBCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54ACDF1C608D30007C8AA3 /* HBBCommentViewController.m */; };
 		4E54ACE21C608D30007C8AA3 /* HBBCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E54ACE01C608D30007C8AA3 /* HBBCommentViewController.xib */; };
+		4E6714811C63569700106445 /* HBBScolledTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6714801C63569700106445 /* HBBScolledTopWindow.m */; };
 		4E7E06C21C61FC6C00E0BDD3 /* HBBCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E06C11C61FC6C00E0BDD3 /* HBBCommentHeaderView.m */; };
 		4E7E06C61C621BAA00E0BDD3 /* HBBCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E06C41C621BAA00E0BDD3 /* HBBCommentTableViewCell.m */; };
 		4E7E06C71C621BAA00E0BDD3 /* HBBCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E7E06C51C621BAA00E0BDD3 /* HBBCommentTableViewCell.xib */; };
@@ -169,6 +170,8 @@
 		4E54ACDE1C608D30007C8AA3 /* HBBCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBCommentViewController.h; sourceTree = "<group>"; };
 		4E54ACDF1C608D30007C8AA3 /* HBBCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBCommentViewController.m; sourceTree = "<group>"; };
 		4E54ACE01C608D30007C8AA3 /* HBBCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBBCommentViewController.xib; sourceTree = "<group>"; };
+		4E67147F1C63569700106445 /* HBBScolledTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBScolledTopWindow.h; sourceTree = "<group>"; };
+		4E6714801C63569700106445 /* HBBScolledTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBScolledTopWindow.m; sourceTree = "<group>"; };
 		4E7E06C01C61FC6C00E0BDD3 /* HBBCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBCommentHeaderView.h; sourceTree = "<group>"; };
 		4E7E06C11C61FC6C00E0BDD3 /* HBBCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBCommentHeaderView.m; sourceTree = "<group>"; };
 		4E7E06C31C621BAA00E0BDD3 /* HBBCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBCommentTableViewCell.h; sourceTree = "<group>"; };
@@ -494,6 +497,8 @@
 				4E4C90501C563C2C00FA9F53 /* HBBPushGuideView.h */,
 				4E4C90511C563C2C00FA9F53 /* HBBPushGuideView.m */,
 				4E4C90521C563C2C00FA9F53 /* HBBPushGuideView.xib */,
+				4E67147F1C63569700106445 /* HBBScolledTopWindow.h */,
+				4E6714801C63569700106445 /* HBBScolledTopWindow.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -752,6 +757,7 @@
 				4E4C90361C563BFB00FA9F53 /* HBBConst.m in Sources */,
 				4E4C90241C563A5600FA9F53 /* HBBTextField.m in Sources */,
 				4E4C901F1C563A5600FA9F53 /* HBBRecommandCategoryCell.m in Sources */,
+				4E6714811C63569700106445 /* HBBScolledTopWindow.m in Sources */,
 				4E4C90381C563BFB00FA9F53 /* main.m in Sources */,
 				4E382B8B1C5E0541006AF8F3 /* HBBTopicVedioView.m in Sources */,
 				4E4C90291C563A8100FA9F53 /* HBBRecommandCategory.m in Sources */,
