@@ -12,10 +12,14 @@
 #import "HBBComment.h"
 #import "HBBUser.h"
 #import "HBBCommentHeaderView.h"
+#import "HBBCommentTableViewCell.h"
 #import <MJExtension.h>
 #import <MJRefresh.h>
 #import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
+
+
+static NSString *const HBBCommentID = @"comment";
 
 @interface HBBCommentViewController () <UITableViewDelegate,UITableViewDataSource>
 /** 工具条底部的间距 */
@@ -30,12 +34,14 @@
 @property (nonatomic,strong) NSArray  *hotComments;
 /** 最新评论(变量不能以 new 开头  否则报错 returning owner object */
 @property (nonatomic,strong) NSMutableArray  *latestComments;
+/** 保存帖子的 top_cmt*/
+@property (nonatomic,strong)HBBComment  *saved_top_cmt;
 
 
 @end
 
 
-static NSInteger const HbbHeaderLabelTag = 101;
+//static NSInteger const HbbHeaderLabelTag = 101;
 
 @implementation HBBCommentViewController
 
@@ -90,6 +96,16 @@ static NSInteger const HbbHeaderLabelTag = 101;
     // 创建头信息包装
     UIView *header = [[UIView alloc] init];
     
+    
+    if (self.topic.top_cmt) {
+        self.saved_top_cmt = self.topic.top_cmt;
+        // 利用 kvc 去除评论的最热评论的高度  显示格局不一样  看图说话  帖子的最热评论和  评论 controller的显示是不一样的
+        self.topic.top_cmt = nil;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
+    
+    
+    
     // 添加 cell
     HBBTopicCell *cell = [HBBTopicCell cell];
     cell.topic = self.topic;
@@ -110,13 +126,28 @@ static NSInteger const HbbHeaderLabelTag = 101;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
-    self.contentTableView.backgroundColor = HBBGlobalBG;
-    
     
     
     // 设置 inset  距离导航栏的距离
     self.automaticallyAdjustsScrollViewInsets = NO;  // 去掉系统的自动调整
     self.contentTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    
+    
+    // cell 的高度设置   ios8  以后的特性
+    // 估计的(高度)  (不设置高度 ,底部可以设置 内容 contentLabel  距离底部为10
+    self.contentTableView.estimatedRowHeight = 44;
+    self.contentTableView.rowHeight = UITableViewAutomaticDimension;
+    
+    self.contentTableView.backgroundColor = HBBGlobalBG;
+    
+    
+    
+    
+    
+    
+    //注册 cell
+    [self.contentTableView registerNib:[UINib nibWithNibName:NSStringFromClass([HBBCommentTableViewCell class]) bundle:nil] forCellReuseIdentifier:HBBCommentID];
+    
     //self.contentTableView.contentInset = self.contentTableView.contentInset;
     //self.contentTableView.rowHeight = 70;
 }
@@ -137,6 +168,13 @@ static NSInteger const HbbHeaderLabelTag = 101;
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    // 恢复帖子中的 top_cmt
+
+    if(self.saved_top_cmt){
+        self.topic.top_cmt = self.saved_top_cmt;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -279,7 +317,7 @@ static NSInteger const HbbHeaderLabelTag = 101;
 //}
 
 /**
- *  封装缓存池
+ *  封装缓存池 4⃣️
  *
  *  @param tableView <#tableView description#>
  *  @param section   <#section description#>
@@ -328,19 +366,23 @@ static NSInteger const HbbHeaderLabelTag = 101;
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"comment"];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:HBBCommentID];
     
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"comment"];
-    }
+    HBBCommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:HBBCommentID];
     
+//    if(cell == nil){
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"comment"];
+//    }
+//
     
-    HBBComment *cmt = [self commentInIndexPath:indexPath];
-    cell.detailTextLabel.text = cmt.content;
-    cell.textLabel.text = cmt.user.username;
-   // cell.imageView.image = [NSURL URLWithString:cmt.user.profile_image];
-    [cell.imageView  sd_setImageWithURL:[NSURL URLWithString:cmt.user
-                                         .profile_image]];
+    cell.comment = [self commentInIndexPath:indexPath];
+    
+//    HBBComment *cmt = [self commentInIndexPath:indexPath];
+//    cell.detailTextLabel.text = cmt.content;
+//    cell.textLabel.text = cmt.user.username;
+//   // cell.imageView.image = [NSURL URLWithString:cmt.user.profile_image];
+//    [cell.imageView  sd_setImageWithURL:[NSURL URLWithString:cmt.user
+//                                         .profile_image]];
     return cell;
 }
 

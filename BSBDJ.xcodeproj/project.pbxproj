@@ -58,6 +58,8 @@
 		4E54ACE11C608D30007C8AA3 /* HBBCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54ACDF1C608D30007C8AA3 /* HBBCommentViewController.m */; };
 		4E54ACE21C608D30007C8AA3 /* HBBCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E54ACE01C608D30007C8AA3 /* HBBCommentViewController.xib */; };
 		4E7E06C21C61FC6C00E0BDD3 /* HBBCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E06C11C61FC6C00E0BDD3 /* HBBCommentHeaderView.m */; };
+		4E7E06C61C621BAA00E0BDD3 /* HBBCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E06C41C621BAA00E0BDD3 /* HBBCommentTableViewCell.m */; };
+		4E7E06C71C621BAA00E0BDD3 /* HBBCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E7E06C51C621BAA00E0BDD3 /* HBBCommentTableViewCell.xib */; };
 		4EE3836F1C58AF69007ACF7B /* HBBProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE3836E1C58AF69007ACF7B /* HBBProgressView.m */; };
 		4EE3837B1C58BF57007ACF7B /* HBBShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE383791C58BF57007ACF7B /* HBBShowPictureViewController.m */; };
 		4EE3837C1C58BF57007ACF7B /* HBBShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE3837A1C58BF57007ACF7B /* HBBShowPictureViewController.xib */; };
@@ -169,6 +171,9 @@
 		4E54ACE01C608D30007C8AA3 /* HBBCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBBCommentViewController.xib; sourceTree = "<group>"; };
 		4E7E06C01C61FC6C00E0BDD3 /* HBBCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBCommentHeaderView.h; sourceTree = "<group>"; };
 		4E7E06C11C61FC6C00E0BDD3 /* HBBCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBCommentHeaderView.m; sourceTree = "<group>"; };
+		4E7E06C31C621BAA00E0BDD3 /* HBBCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBCommentTableViewCell.h; sourceTree = "<group>"; };
+		4E7E06C41C621BAA00E0BDD3 /* HBBCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBCommentTableViewCell.m; sourceTree = "<group>"; };
+		4E7E06C51C621BAA00E0BDD3 /* HBBCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBBCommentTableViewCell.xib; sourceTree = "<group>"; };
 		4ECC98741C56412A0065878C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4EE3836D1C58AF69007ACF7B /* HBBProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBProgressView.h; sourceTree = "<group>"; };
 		4EE3836E1C58AF69007ACF7B /* HBBProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBProgressView.m; sourceTree = "<group>"; };
@@ -358,6 +363,9 @@
 				4E382B8C1C5E0581006AF8F3 /* HBBTopicVedioView.xib */,
 				4E7E06C01C61FC6C00E0BDD3 /* HBBCommentHeaderView.h */,
 				4E7E06C11C61FC6C00E0BDD3 /* HBBCommentHeaderView.m */,
+				4E7E06C31C621BAA00E0BDD3 /* HBBCommentTableViewCell.h */,
+				4E7E06C41C621BAA00E0BDD3 /* HBBCommentTableViewCell.m */,
+				4E7E06C51C621BAA00E0BDD3 /* HBBCommentTableViewCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -633,6 +641,7 @@
 				4E4C8FFC1C5639BE00FA9F53 /* HBBTopicCell.xib in Resources */,
 				4E4C90101C563A4300FA9F53 /* HBBFriendTrendsViewController.xib in Resources */,
 				4E382B8D1C5E0581006AF8F3 /* HBBTopicVedioView.xib in Resources */,
+				4E7E06C71C621BAA00E0BDD3 /* HBBCommentTableViewCell.xib in Resources */,
 				4E4C90221C563A5600FA9F53 /* HBBRecommandUserTableViewCell.xib in Resources */,
 				4E4C8FFA1C5639BE00FA9F53 /* HBBRecommandTagCell.xib in Resources */,
 				4E54ACE21C608D30007C8AA3 /* HBBCommentViewController.xib in Resources */,
@@ -731,6 +740,7 @@
 				4E4C903F1C563C0A00FA9F53 /* UIView+HBBExtension.m in Sources */,
 				4E4C90011C5639CE00FA9F53 /* HBBRecommandTag.m in Sources */,
 				4EEFB5C41C57281000C81D50 /* HBBTopicPictureView.m in Sources */,
+				4E7E06C61C621BAA00E0BDD3 /* HBBCommentTableViewCell.m in Sources */,
 				4E4C904C1C563C1B00FA9F53 /* HBBTabBarController.m in Sources */,
 				4E4C8FF11C5639A100FA9F53 /* HBBRecommandTagsViewController.m in Sources */,
 				4E54ACDD1C6059B8007C8AA3 /* HBBComment.m in Sources */,

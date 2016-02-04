@@ -7,6 +7,7 @@
 //  段子  模型数据类
 
 #import <Foundation/Foundation.h>
+@class HBBComment;
 
 @interface HBBTopic : NSObject
 /**  id */
@@ -53,7 +54,7 @@
 /**  视频的播放地址 */
 @property (nonatomic,copy) NSString *videouri;
 /** 最热评论(期望这个数组中存放的是 HBBComment模型*/
-@property (nonatomic,strong) NSArray  *top_cmt;
+@property (nonatomic,strong) HBBComment  *top_cmt;
 
 
 

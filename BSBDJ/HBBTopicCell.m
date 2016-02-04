@@ -169,7 +169,7 @@
     
     // 处理最热评论
     
-    HBBComment *cmt = [topic.top_cmt firstObject];
+    HBBComment *cmt = topic.top_cmt;
     
     if (cmt) {
         self.topicCmtView.hidden = NO;
