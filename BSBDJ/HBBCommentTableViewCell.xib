@@ -37,12 +37,6 @@
                         <state key="normal" image="commentLikeButton"/>
                         <state key="highlighted" image="commentLikeButtonClick"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyw-ba-t4R" userLabel="comment content Label">
-                        <rect key="frame" x="57" y="42" width="224" height="114.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhA-Rq-qGn" userLabel="ding count  Label">
                         <rect key="frame" x="281" y="50" width="40" height="16"/>
                         <constraints>
@@ -63,15 +57,40 @@
                         <color key="textColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27w-Gi-KiZ" userLabel="voice Button">
+                        <rect key="frame" x="57" y="42" width="62" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="62" id="8Sb-0w-mlr"/>
+                            <constraint firstAttribute="height" constant="22" id="C61-k3-sib"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <inset key="titleEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="45" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="12&quot;" image="play-voice-stop" backgroundImage="play-voice-bg">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="play-voice-bg-select"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyw-ba-t4R" userLabel="comment content Label">
+                        <rect key="frame" x="57" y="42" width="224" height="114.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="hFZ-Vx-XvB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="vRJ-Vp-cLe" secondAttribute="trailing" constant="10" id="7fk-4h-9SW"/>
                     <constraint firstItem="aSy-V2-a3C" firstAttribute="bottom" secondItem="g1c-7Z-TVp" secondAttribute="bottom" id="85M-qu-F8y"/>
                     <constraint firstItem="aSy-V2-a3C" firstAttribute="leading" secondItem="g1c-7Z-TVp" secondAttribute="trailing" constant="-1" id="8eA-Hs-nuK"/>
+                    <constraint firstItem="27w-Gi-KiZ" firstAttribute="leading" secondItem="Dyw-ba-t4R" secondAttribute="leading" id="AmU-fo-c7P"/>
                     <constraint firstItem="vRJ-Vp-cLe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="BQw-5O-p8t"/>
                     <constraint firstItem="Dyw-ba-t4R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="57" id="He6-P7-l4D"/>
                     <constraint firstItem="g1c-7Z-TVp" firstAttribute="leading" secondItem="7kn-FV-uXa" secondAttribute="trailing" constant="2" id="JGc-jJ-1g7"/>
                     <constraint firstAttribute="trailing" secondItem="DhA-Rq-qGn" secondAttribute="trailing" constant="10" id="LLi-yD-BlX"/>
+                    <constraint firstItem="27w-Gi-KiZ" firstAttribute="top" secondItem="Dyw-ba-t4R" secondAttribute="top" id="SAI-f8-sbK"/>
                     <constraint firstAttribute="bottom" secondItem="Dyw-ba-t4R" secondAttribute="bottom" constant="10" id="Szo-oZ-N2N"/>
                     <constraint firstItem="Dyw-ba-t4R" firstAttribute="top" secondItem="aSy-V2-a3C" secondAttribute="bottom" constant="10" id="WKo-yS-VQo"/>
                     <constraint firstItem="Dyw-ba-t4R" firstAttribute="top" secondItem="aSy-V2-a3C" secondAttribute="bottom" constant="10" id="Xg8-oA-Esf"/>
@@ -91,6 +110,7 @@
                 <outlet property="likeCountLabel" destination="DhA-Rq-qGn" id="43E-Lh-aTS"/>
                 <outlet property="sexImageView" destination="g1c-7Z-TVp" id="a1c-fc-Glc"/>
                 <outlet property="usernameLabel" destination="aSy-V2-a3C" id="WTd-5r-CIZ"/>
+                <outlet property="voiceBtn" destination="27w-Gi-KiZ" id="VLT-9R-InB"/>
             </connections>
             <point key="canvasLocation" x="502.5" y="260.5"/>
         </tableViewCell>
@@ -98,5 +118,8 @@
     <resources>
         <image name="commentLikeButton" width="18" height="18"/>
         <image name="commentLikeButtonClick" width="19" height="19"/>
+        <image name="play-voice-bg" width="62" height="22"/>
+        <image name="play-voice-bg-select" width="74" height="24"/>
+        <image name="play-voice-stop" width="12" height="12"/>
     </resources>
 </document>

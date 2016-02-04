@@ -8,7 +8,12 @@
 //
 
 #import "HBBComment.h"
+#import <MJExtension.h>
 
 @implementation HBBComment
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{@"ID":@"id"};
+}
 
 @end
