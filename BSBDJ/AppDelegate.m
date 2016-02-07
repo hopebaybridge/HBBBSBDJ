@@ -11,7 +11,7 @@
 #import "HBBPushGuideView.h"
 #import "HBBScolledTopWindow.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UITabBarControllerDelegate>
 
 @end
 
@@ -25,10 +25,10 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     // 设置窗口根控制器
-    
+    // 设置代理
     HBBTabBarController *tabBarController = [[HBBTabBarController alloc] init];
     
-    
+    tabBarController.delegate = self;
     self.window.rootViewController = tabBarController;
     
         // 显示窗口
@@ -41,6 +41,13 @@
 //        [HBBScolledTopWindow show];
     
     return YES;
+}
+
+#pragma mark -<UITabBarControllerDelegate>
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    // 发送通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:HBBTabBarDidSelectNotificatioin object:nil userInfo:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

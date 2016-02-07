@@ -35,11 +35,11 @@
 }
 
 - (void)settingClick{
-    HBBFunc;
+//    HBBFunc;
 }
 
 - (void)moonClick{
-    HBBFunc;
+//    HBBFunc;
 }
 
 

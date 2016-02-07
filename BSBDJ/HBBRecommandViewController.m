@@ -158,7 +158,7 @@ static NSString *const HBBUserID = @"user";
 
 - (void)loadNewUsers{
     
-    HBBFunc;
+//    HBBFunc;
     
     HBBRecommandCategory *category = HBBSelectedCategory;
 

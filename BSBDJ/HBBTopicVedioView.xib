@@ -35,13 +35,16 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHF-Ge-cHs">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHF-Ge-cHs" userLabel="playButton">
                     <rect key="frame" x="137" y="83" width="71" height="71"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="71" id="Cga-jV-1Io"/>
                         <constraint firstAttribute="height" constant="71" id="UKy-ql-xxS"/>
                     </constraints>
                     <state key="normal" image="video-play"/>
+                    <connections>
+                        <action selector="playVideo:" destination="iN0-l3-epB" eventType="touchUpInside" id="6pY-7Z-X1h"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,6 +67,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="imageView" destination="gjk-8T-x9Y" id="D6l-KA-zFc"/>
+                <outlet property="playBtn" destination="pHF-Ge-cHs" id="2NG-gt-vYH"/>
                 <outlet property="playCountLabel" destination="gib-T3-EAy" id="P3E-wj-Kww"/>
                 <outlet property="videoTimeLabel" destination="81e-nb-tLL" id="U9K-Ra-k3Z"/>
             </connections>

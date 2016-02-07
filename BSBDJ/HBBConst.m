@@ -38,3 +38,10 @@ NSString *const HBBUserSexFeMale = @"f";
 
 /** 精华 cell 最热评论标题的高度*/
 CGFloat const HBBTopicCellTopicCmtTitleH  = 20;
+
+/** tabBar 被选中的通知名字 */
+NSString *const  HBBTabBarDidSelectNotificatioin =  @"HBBTabBarDidSelectNotificatioin";
+/** tabBar 被选中的通知   被选中的控制器的 index key  */
+NSString *const  HBBSelectedControllerIndexkey = @"HBBSelectedControllerIndexkey";
+/** tabBar 被选中的通知 被选中的控制器 key*/
+NSString *const  HBBSelectedControllerKey  = @"HBBSelectedControllerKey";

@@ -30,12 +30,38 @@
 
 @implementation HBBCommentTableViewCell
 
+/**
+ *  自定义 UIMenuControlller 需要成为第一响应者
+ *
+ *  @return <#return value description#>
+ */
+- (BOOL) canBecomeFirstResponder{
+    return YES;
+}
+
+/**
+ *  自定义 UIMenuControlller 需要去掉系统的提示 copy paste  ... and so on 
+ *
+ *  @param action <#action description#>
+ *  @param sender <#sender description#>
+ *
+ *  @return <#return value description#>
+ */
+-(BOOL)canPerformAction:(SEL)action withSender:(id)sender{
+    return NO;
+}
 
 
 -(void)setComment:(HBBComment *)comment{
     _comment = comment;
     
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    
+    // pch   UIImageView + HBBChageImageShape
+    [self.self.headImageView setHeadImageShape:comment.user.profile_image];
+    
+    
     self.sexImageView.image = [comment.user.sex isEqualToString:HBBUserSexMale] ? [UIImage imageNamed:@"Profile_manIcon"] :[UIImage imageNamed:@"Profile_womanIcon"];
     self.cmtContentLabel.text = comment.content;
     self.usernameLabel.text = comment.user.username;

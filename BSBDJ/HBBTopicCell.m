@@ -106,6 +106,10 @@
     UIImageView *bgView = [[UIImageView alloc] init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
+    
+//    // 效率低  可能会卡  不如 上下文自己画
+//    self.profileImageView.layer.cornerRadius = self.profileImageView.width * 0.5;
+//    self.profileImageView.layer.masksToBounds = YES;
 }
 
 
@@ -114,7 +118,12 @@
     
     _topic = topic;
     
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    // pch   UIImageView + HBBChageImageShape
+    [self.profileImageView setHeadImageShape:topic.profile_image];
+    
+
     self.nameLabel.text = topic.name;
     
     // 设置时间  setter

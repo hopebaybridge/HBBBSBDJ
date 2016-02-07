@@ -16,6 +16,10 @@
 #import "UIBarButtonItem+HBBExtension.h"
 #import "HBBConst.h"
 #import "NSDate+HBBDateExtension.h"
+#import "UIImage+HBBChageImageShape.h"
+#import "UIImageView+HBBChageImageShape.h"
+
+
 
 
 #ifdef DEBUG

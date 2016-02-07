@@ -16,13 +16,24 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *playCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *videoTimeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *playBtn;
+
+
 
 @end
 
 
 @implementation HBBTopicVedioView
 
-
+/**
+ *  播放视频
+ *
+ *  @param sender <#sender description#>
+ */
+- (IBAction)playVideo:(UIButton *)sender {
+    
+    
+}
 
 
 + (instancetype)videoView{

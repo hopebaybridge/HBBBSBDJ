@@ -33,7 +33,7 @@
 }
 
 - (void)tagClick{
-    HBBFunc;
+//    HBBFunc;
 }
 
 

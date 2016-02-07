@@ -28,10 +28,10 @@ static NSString *const HBBPlaceholderColorKeyPath = @"_placeholderLabel.textColo
         // 取出属性
         objc_property_t property =  properties[i];
         
-        HBBLog(@"%s  <----> %s",property_getName(property),property_getAttributes(property));
+//        HBBLog(@"%s  <----> %s",property_getName(property),property_getAttributes(property));
     }
     
-    HBBLog(@"----------------------------------");
+//    HBBLog(@"----------------------------------");
     
     // 释放 copy后的内存资源
     free(properties);
@@ -48,11 +48,11 @@ static NSString *const HBBPlaceholderColorKeyPath = @"_placeholderLabel.textColo
         Ivar ivar = ivars[i];
         
         
-        HBBLog(@"%s < ---->%s",ivar_getName(ivar),ivar_getTypeEncoding(ivar));
+//        HBBLog(@"%s < ---->%s",ivar_getName(ivar),ivar_getTypeEncoding(ivar));
         
         
     }
-    HBBLog(@"--------------------------------------");
+//    HBBLog(@"--------------------------------------");
     
     free(ivars);
 

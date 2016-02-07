@@ -33,6 +33,8 @@ static NSString *const HBBTopicIdentifier = @"topic";
 /** 记录请求参数   与返回的作对比*/
 @property (nonatomic,strong) NSDictionary  *params;
 
+/**上次选中的索引 (或者控制器) */
+@property (nonatomic,assign) NSInteger lastSelectedIndex;
 
 @end
 
@@ -87,7 +89,32 @@ static NSString *const HBBTopicIdentifier = @"topic";
     // 注册topicecellnib
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([HBBTopicCell class]) bundle:nil] forCellReuseIdentifier:HBBTopicIdentifier];
     
+    
+    //监听 tabBar点击的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarSelect) name:HBBTabBarDidSelectNotificatioin object:nil];
+    
 }
+
+- (void)tabBarSelect{
+    
+    // 如果精华被连续点击两次直接刷新   选中的在视觉主窗口  选中的是导航控制器
+    if(self.lastSelectedIndex == self.tabBarController.selectedIndex
+       && self.tabBarController.selectedViewController == self.navigationController
+       && self.view.isShowingOnKeyWindow){
+        
+        [self.tableView.mj_header beginRefreshing];
+        
+         HBBFunc;
+        
+    }
+    
+   
+    
+    // 记录这一次选中的索引
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
+    
+}
+
 
 
 /**
@@ -129,7 +156,7 @@ static NSString *const HBBTopicIdentifier = @"topic";
     
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
-        HBBLog(@"%@",downloadProgress);
+//        HBBLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask *  task, id  responseObject) {
         
         // 网络请求迟缓  请求会一直执行  网络请求时的 params  与记录的 params不同
@@ -173,10 +200,10 @@ static NSString *const HBBTopicIdentifier = @"topic";
     
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
-        HBBLog(@"%@",downloadProgress);
+//        HBBLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-       HBBLog(@"%@",responseObject);
+//       HBBLog(@"%@",responseObject);
         
         // 网络请求迟缓  请求会一直执行  网络请求时的 params  与记录的 params不同
         if(self.params != params) return ;

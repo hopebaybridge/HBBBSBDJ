@@ -276,15 +276,7 @@ static NSString *const HBBCommentID = @"comment";
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark -<UITableViewDelegate>
-/**
- *  拖拽发生的事件 (键盘隐藏)  需要 tableView 的代理连线  file's owner  当前的控制器
- *
- *  @param scrollView <#scrollView description#>
- */
--(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    [self.view endEditing:YES];
-}
+
 
 #pragma mark -<UITableViewDataSource>
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -482,6 +474,78 @@ static NSString *const HBBCommentID = @"comment";
 //    [cell.imageView  sd_setImageWithURL:[NSURL URLWithString:cmt.user
 //                                         .profile_image]];
     return cell;
+}
+
+
+#pragma mark -<UITableViewDelegate>
+/**
+ *  拖拽发生的事件 (键盘隐藏)  需要 tableView 的代理连线  file's owner  当前的控制器
+ *  
+ *  UIMenuController 消失
+ *
+ *  @param scrollView <#scrollView description#>
+ */
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [self.view endEditing:YES];
+    
+    [[UIMenuController sharedMenuController ] setMenuVisible:NO animated:YES];
+}
+
+/**
+ *  选中指定 cell 发生的事件
+ *
+ *  @param tableView <#tableView description#>
+ *  @param indexPath <#indexPath description#>
+ */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIMenuController  *menuVC = [UIMenuController sharedMenuController];
+    
+    // 重复点击 会消失
+    if (menuVC.isMenuVisible) {
+        [menuVC setMenuVisible:NO animated:YES];
+    } else {
+        // 被点击的 cell
+        HBBCommentTableViewCell *cmtCell =  (HBBCommentTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+        
+        // 让 cell 成为第一响应者
+        [cmtCell becomeFirstResponder];
+        
+        // 显示 MenuController
+        UIMenuItem  *ding = [[UIMenuItem alloc] initWithTitle:@"顶" action:@selector(ding:)];
+        UIMenuItem  *reply = [[UIMenuItem alloc] initWithTitle:@"回复" action:@selector(reply:)];
+        UIMenuItem  *report = [[UIMenuItem alloc] initWithTitle:@" 举报" action:@selector(report:)];
+        
+        menuVC.menuItems = @[ding,reply,report];
+        CGRect rect = CGRectMake(0, cmtCell.height * 0.5, cmtCell.width, cmtCell.height * 0.5);
+        
+        [menuVC setTargetRect:rect inView:cmtCell];
+        [menuVC setMenuVisible:YES animated:YES];
+        
+    }
+}
+
+
+#pragma mark -MenuItem 处理
+- (void)ding:(UIMenuController *)menuVC{
+    
+    NSIndexPath *indexPath = [self.contentTableView indexPathForSelectedRow];
+    
+    HBBLog(@"%s ---> %@",__func__ ,[self commentInIndexPath:indexPath].content);
+    
+}
+
+- (void)reply:(UIMenuController *)menuVC{
+    
+    NSIndexPath *indexPath = [self.contentTableView indexPathForSelectedRow];
+    
+    HBBLog(@"%s ---> %@",__func__ ,[self commentInIndexPath:indexPath].content);
+}
+
+- (void)report:(UIMenuController *)menuVC{
+    
+    NSIndexPath *indexPath = [self.contentTableView indexPathForSelectedRow];
+    
+    HBBLog(@"%s ---> %@",__func__ ,[self commentInIndexPath:indexPath].content);
 }
 
 /*
