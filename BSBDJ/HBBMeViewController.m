@@ -7,12 +7,16 @@
 //
 
 #import "HBBMeViewController.h"
+#import "HBBMeCell.h"
+#import "HBBMeFooterView.h"
 
 @interface HBBMeViewController ()
 
 @end
 
 @implementation HBBMeViewController
+
+static NSString *HBBMeID = @"me";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,6 +35,20 @@
     
     // 在 pch 文件中统一设置整站的背景颜色
     self.view.backgroundColor = HBBGlobalBG;
+    
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.tableView registerClass:[HBBMeCell class] forCellReuseIdentifier:HBBMeID];
+    
+     // 调整 header 和 footer
+    self.tableView.sectionHeaderHeight = 0;
+    self.tableView.sectionFooterHeight = HBBTopicCellMargin;
+    
+    // 调整 inset
+    self.tableView.contentInset = UIEdgeInsetsMake(HBBTopicCellMargin - 35, 0, 0, 0);
+    
+    // 设置 footerView
+    self.tableView.tableFooterView = [[HBBMeFooterView alloc] init];
 
 }
 
@@ -46,6 +64,30 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - 数据源代理方法
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return  1;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    HBBMeCell *cell = [tableView dequeueReusableCellWithIdentifier:HBBMeID];
+    
+    if (indexPath.section == 0) {
+        cell.imageView.image = [UIImage imageNamed:@"mine-icon-nearby"];
+        cell.textLabel.text = @"登录/注册";
+    } else  if(indexPath.section == 1){
+        cell.textLabel.text = @"离线下载";
+    }
+    
+    return cell;
 }
 
 /*

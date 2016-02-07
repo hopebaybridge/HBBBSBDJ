@@ -16,6 +16,7 @@
 #import <UIImageView+WebCache.h>
 #import <MJExtension.h>
 #import <MJRefresh.h>
+#import "HBBNewViewController.h"
 
 static NSString *const HBBTopicIdentifier = @"topic";
 
@@ -136,6 +137,18 @@ static NSString *const HBBTopicIdentifier = @"topic";
 }
 
 /**
+ *  param  a 参数处理    精华和新帖只有这个参数不同
+ *
+ *  @return <#return value description#>
+ */
+
+- (NSString *)a{
+    
+    return  [self.parentViewController isKindOfClass:[HBBNewViewController class]] ? @"newlist":@"list";
+}
+
+
+/**
  *  加载更多数据  上拉
  */
 - (void)loadMoreTopics{
@@ -147,7 +160,7 @@ static NSString *const HBBTopicIdentifier = @"topic";
     self.currentPage++;
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     params[@"page"] = @(self.currentPage);
@@ -193,7 +206,7 @@ static NSString *const HBBTopicIdentifier = @"topic";
     
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     self.params = params;

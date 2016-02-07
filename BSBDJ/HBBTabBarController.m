@@ -59,7 +59,7 @@
     [self setupChildViewController:[[HBBFriendTrendsViewController alloc] init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
 
     // 添加 我
-    [self setupChildViewController:[[HBBMeViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupChildViewController:[[HBBMeViewController alloc] initWithStyle:UITableViewStyleGrouped] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
    //  tabbar 只读 无法直接赋值  可以通过 kvc 赋值
    // self.tabBar = [[HBBTabBar alloc] init];  Assignment to readonly property;

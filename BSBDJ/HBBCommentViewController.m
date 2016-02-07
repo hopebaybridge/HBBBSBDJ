@@ -151,6 +151,14 @@ static NSString *const HBBCommentID = @"comment";
     
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
+        
+        // 评论没有数据 返回的是 空的 NSArray
+        if ( ![responseObject isKindOfClass:[NSDictionary class]]) {
+            [self.contentTableView.mj_header endRefreshing];
+            return ;
+        }
+        
+        
         // 最热评论
         self.hotComments = [HBBComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         // 最新评论
