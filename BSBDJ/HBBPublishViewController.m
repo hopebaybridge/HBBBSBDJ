@@ -8,6 +8,8 @@
 
 #import "HBBPublishViewController.h"
 #import "HBBVerticalButton.h"
+#import "HBBPostWordViewController.h"
+#import "HBBNavigationController.h"
 #import <POP.h>
 
 // 动画延迟间隔时间
@@ -118,6 +120,20 @@ static CGFloat const HBBSpringFactor = 10;
             HBBLog(@"发视频");
         }else if (btn.tag == 1){
             HBBLog(@"发图片");
+        }else if(btn.tag == 2){
+            // 发段子
+            HBBPostWordViewController *postwordVC = [[HBBPostWordViewController alloc] init];
+            HBBNavigationController *nav = [[HBBNavigationController alloc] initWithRootViewController:postwordVC];
+            
+            // 这里不能使用 self来弹出其他 的控制器,因为 self 执行了 dismiss 操作
+            UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
+            [root presentViewController:nav animated:YES completion:nil];
+        }else if(btn.tag == 3){
+            HBBLog(@"发声音");
+        }else if(btn.tag == 4){
+            HBBLog(@"审帖");
+        }else if(btn.tag == 5){
+            HBBLog(@"离线下砸");
         }
     }];
 }

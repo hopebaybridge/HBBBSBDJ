@@ -21,8 +21,25 @@
     // 当导航栏用在 HBBNavigationController 中, appearance设置才会生效
 //    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
     
+
     UINavigationBar *bar = [UINavigationBar appearance];
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    // 统一设置导航栏的标题
+    [bar setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:20]}];
+    
+    
+    // 设置 item
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    //正常状态
+    NSMutableDictionary *normalItemAttrs = [NSMutableDictionary dictionary];
+    normalItemAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    normalItemAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:16];
+    [item setTitleTextAttributes:normalItemAttrs forState:UIControlStateNormal];
+    // 禁止状态
+    NSMutableDictionary *disableItemAttrs = [NSMutableDictionary dictionary];
+    disableItemAttrs[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+    [item setTitleTextAttributes:disableItemAttrs forState:UIControlStateDisabled];
+    
 }
 
 - (void)viewDidLoad {

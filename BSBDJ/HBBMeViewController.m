@@ -9,6 +9,7 @@
 #import "HBBMeViewController.h"
 #import "HBBMeCell.h"
 #import "HBBMeFooterView.h"
+#import <MJRefresh.h>
 
 @interface HBBMeViewController ()
 
@@ -49,6 +50,31 @@ static NSString *HBBMeID = @"me";
     
     // 设置 footerView
     self.tableView.tableFooterView = [[HBBMeFooterView alloc] init];
+    
+//    [self.tableView.tableFooterView setValue:@-64 forKeyPath:@"frame.origin.y"];
+    
+    
+    self.tableView.tableHeaderView = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshHeader)];
+    self.tableView.mj_header.hidden = YES;
+    
+    
+    self.tableView.tableFooterView  = [[HBBMeFooterView alloc] init];
+
+
+}
+
+
+- (void)refreshFooter{
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(- HBBScreenWidth / 4 , 0, 0, 0);
+    
+
+}
+
+-(void)refreshHeader{
+    
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(HBBScreenWidth / 4 , 0, 0, 0);
 
 }
 
@@ -86,9 +112,24 @@ static NSString *HBBMeID = @"me";
     } else  if(indexPath.section == 1){
         cell.textLabel.text = @"离线下载";
     }
-    
     return cell;
 }
+
+//- (void) scrollViewDidScroll: (UIScrollView *) _scrollView
+//{
+//    HBBFunc;
+//}
+
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+//    
+//    self.tableView.tableFooterView = [MJRefreshBackNormalFooter  footerWithRefreshingTarget:self refreshingAction:@selector(refreshFooter)];
+    
+    [self refreshFooter];
+    self.tableView.mj_footer.hidden = YES;
+}
+
 
 /*
 #pragma mark - Navigation

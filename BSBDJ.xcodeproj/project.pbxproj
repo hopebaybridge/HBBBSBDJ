@@ -76,6 +76,8 @@
 		4EE383811C59084B007ACF7B /* HBBPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE3837F1C59084B007ACF7B /* HBBPublishViewController.xib */; };
 		4EEFB5C41C57281000C81D50 /* HBBTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFB5C31C57281000C81D50 /* HBBTopicPictureView.m */; };
 		4EEFB5C61C57282F00C81D50 /* HBBTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EEFB5C51C57282F00C81D50 /* HBBTopicPictureView.xib */; };
+		4EF5EC581C68409F004DC1C9 /* HBBPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5EC571C68409F004DC1C9 /* HBBPostWordViewController.m */; };
+		4EF5EC5B1C6875AF004DC1C9 /* HBBPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5EC5A1C6875AF004DC1C9 /* HBBPlaceholderTextView.m */; };
 		C3DBDA18316E5365057652EB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C30A6042B713FB68DF78ED6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -212,6 +214,10 @@
 		4EEFB5C21C57281000C81D50 /* HBBTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBTopicPictureView.h; sourceTree = "<group>"; };
 		4EEFB5C31C57281000C81D50 /* HBBTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBTopicPictureView.m; sourceTree = "<group>"; };
 		4EEFB5C51C57282F00C81D50 /* HBBTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBBTopicPictureView.xib; sourceTree = "<group>"; };
+		4EF5EC561C68409F004DC1C9 /* HBBPostWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBPostWordViewController.h; sourceTree = "<group>"; };
+		4EF5EC571C68409F004DC1C9 /* HBBPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBPostWordViewController.m; sourceTree = "<group>"; };
+		4EF5EC591C6875AF004DC1C9 /* HBBPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBPlaceholderTextView.h; sourceTree = "<group>"; };
+		4EF5EC5A1C6875AF004DC1C9 /* HBBPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBPlaceholderTextView.m; sourceTree = "<group>"; };
 		529EABD42226B8DCB64EA787 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9C30A6042B713FB68DF78ED6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -285,6 +291,7 @@
 		4E4C8FD21C5637A700FA9F53 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				4EF5EC521C683F26004DC1C9 /* Publish-发布 */,
 				4E4C8FD91C56385600FA9F53 /* Essence-精华 */,
 				4E4C8FD81C56383600FA9F53 /* New-新帖 */,
 				4E4C8FD71C56381800FA9F53 /* FriedTrends-关注 */,
@@ -548,9 +555,6 @@
 				4E4C90471C563C1B00FA9F53 /* HBBTabBarController.m */,
 				4E4C90481C563C1B00FA9F53 /* HBBNavigationController.h */,
 				4E4C90491C563C1B00FA9F53 /* HBBNavigationController.m */,
-				4EE3837D1C59084B007ACF7B /* HBBPublishViewController.h */,
-				4EE3837E1C59084B007ACF7B /* HBBPublishViewController.m */,
-				4EE3837F1C59084B007ACF7B /* HBBPublishViewController.xib */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -570,6 +574,44 @@
 				4E8463391C6613BE0017EE6D /* UIImageView+HBBChageImageShape.m */,
 			);
 			name = category;
+			sourceTree = "<group>";
+		};
+		4EF5EC521C683F26004DC1C9 /* Publish-发布 */ = {
+			isa = PBXGroup;
+			children = (
+				4EF5EC551C683F4D004DC1C9 /* controller */,
+				4EF5EC541C683F46004DC1C9 /* view */,
+				4EF5EC531C683F3B004DC1C9 /* model */,
+			);
+			name = "Publish-发布";
+			sourceTree = "<group>";
+		};
+		4EF5EC531C683F3B004DC1C9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		4EF5EC541C683F46004DC1C9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4EF5EC591C6875AF004DC1C9 /* HBBPlaceholderTextView.h */,
+				4EF5EC5A1C6875AF004DC1C9 /* HBBPlaceholderTextView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		4EF5EC551C683F4D004DC1C9 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4EE3837D1C59084B007ACF7B /* HBBPublishViewController.h */,
+				4EE3837E1C59084B007ACF7B /* HBBPublishViewController.m */,
+				4EE3837F1C59084B007ACF7B /* HBBPublishViewController.xib */,
+				4EF5EC561C68409F004DC1C9 /* HBBPostWordViewController.h */,
+				4EF5EC571C68409F004DC1C9 /* HBBPostWordViewController.m */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 		5D20F52BC3935936A32582A6 /* Frameworks */ = {
@@ -792,8 +834,10 @@
 				4EEFB5C41C57281000C81D50 /* HBBTopicPictureView.m in Sources */,
 				4EDFDA9A1C674EF7001139AD /* HBBWebViewController.m in Sources */,
 				4E7E06C61C621BAA00E0BDD3 /* HBBCommentTableViewCell.m in Sources */,
+				4EF5EC5B1C6875AF004DC1C9 /* HBBPlaceholderTextView.m in Sources */,
 				4E4C904C1C563C1B00FA9F53 /* HBBTabBarController.m in Sources */,
 				4E4C8FF11C5639A100FA9F53 /* HBBRecommandTagsViewController.m in Sources */,
+				4EF5EC581C68409F004DC1C9 /* HBBPostWordViewController.m in Sources */,
 				4E54ACDD1C6059B8007C8AA3 /* HBBComment.m in Sources */,
 				4E4C902D1C563A9700FA9F53 /* HBBMeViewController.m in Sources */,
 				4E4C90411C563C0A00FA9F53 /* NSDate+HBBDateExtension.m in Sources */,
