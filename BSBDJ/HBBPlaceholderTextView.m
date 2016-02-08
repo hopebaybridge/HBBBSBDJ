@@ -14,6 +14,18 @@
  1⃣️  利用 drawrect  绘制文字  但是 缺点是 在 scroll滚动的时候无法同光标一起滚动    视觉效果不佳
  2⃣️  添加 UILabel 控件  将文字设置到 UILabel 中   ,然后将 UIlabel 添加到 textView 中,则滚动 textView的同时, UILabel 滚动   文字滚动
  */
+
+
+
+/**
+ *  [self setNeedsLayout];  invoke ---->  - (void)layoutSubviews()
+
+ *  [self setNeedsDisplay];  invoke  ----->  - (void)drawRect:(CGRect)rect
+
+ */
+
+
+
 @interface HBBPlaceholderTextView()
 /**占位文字 label */
 @property (nonatomic,weak) UILabel *placeholderLabel;
@@ -105,17 +117,22 @@
 //    
 //}
 
-- (void)updatePlaceholderLabelSize{
+//- (void)updatePlaceholderLabelSize{
+//    
+//    CGSize maxSize = CGSizeMake(HBBScreenWidth - 2 * self.placeholderLabel.x, MAXFLOAT);
+//    
+//    // label 文字默认锤子居中   所以要设置 label 的高度和文字的总高度一致
+//    self.placeholderLabel.size = [self.placeholder boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.font} context:nil].size;
+//    
+////    self.placeholderLabel.backgroundColor = [UIColor redColor];
+//}
+
+
+- (void)layoutSubviews{
     
-    CGSize maxSize = CGSizeMake(HBBScreenWidth - 2 * self.placeholderLabel.x, MAXFLOAT);
-    
-    // label 文字默认锤子居中   所以要设置 label 的高度和文字的总高度一致
-    self.placeholderLabel.size = [self.placeholder boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.font} context:nil].size;
-    
-//    self.placeholderLabel.backgroundColor = [UIColor redColor];
+    self.placeholderLabel.width = self.width - 2 * self.placeholderLabel.x;
+    [self.placeholderLabel sizeToFit];
 }
-
-
 
 #pragma mark -重写 setter
 - (void)setPlaceholderColor:(UIColor *)placeholderColor{
@@ -132,7 +149,9 @@
     
     self.placeholderLabel.text = placeholder;   // 2⃣️
     
-    [self updatePlaceholderLabelSize];// 2⃣️
+    [self setNeedsLayout];
+    
+//    [self updatePlaceholderLabelSize];// 2⃣️
 
 //   1⃣️ [self setNeedsDisplay];
 }
@@ -144,7 +163,9 @@
     
     self.placeholderLabel.font = font;  // 2⃣️
     
-    [self updatePlaceholderLabelSize];// 2⃣️
+    [self setNeedsLayout];
+    
+//    [self updatePlaceholderLabelSize];// 2⃣️
     
 //   1⃣️ [self setNeedsDisplay];
 }
