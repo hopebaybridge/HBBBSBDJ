@@ -45,3 +45,9 @@ NSString *const  HBBTabBarDidSelectNotificatioin =  @"HBBTabBarDidSelectNotifica
 NSString *const  HBBSelectedControllerIndexkey = @"HBBSelectedControllerIndexkey";
 /** tabBar 被选中的通知 被选中的控制器 key*/
 NSString *const  HBBSelectedControllerKey  = @"HBBSelectedControllerKey";
+
+/**  发布段子 -  tag 的间距 */
+CGFloat const  HBBPublicWordsTagMargin = 5;
+/**  发布段子 -  tag 的高度*/
+CGFloat const  HBBPublicWordsTagHeight = 25;
+

@@ -14,8 +14,10 @@
 #import "HBBTopicVedioView.h"
 #import "HBBUser.h"
 #import "HBBComment.h"
+#import "HBBLoginTool.h"
+#import <SVProgressHUD.h>
 
-@interface HBBTopicCell()
+@interface HBBTopicCell()// <UIActionSheetDelegate>
 /**图像*/
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 
@@ -242,5 +244,76 @@
     
     [super setFrame:frame];
 }
+
+
+/**
+ *  点击关注按钮的事件
+ */
+- (IBAction)more {
+    
+    
+//    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle: nil otherButtonTitles:@"收藏",@"举报", nil];
+//    
+//    [sheet showInView:self.window];
+    
+    // 准备初始化配置参数
+//    NSString *title = @"Alert Button Selected";
+//    NSString *message = @"I need your attention NOW!";
+    NSString *saveButtonTitle = @"收藏";
+    NSString *reportButtonTitle = @"举报";
+    NSString *cancelButtonTitle = @"取消";
+    // 初始化
+    // style : UIAlertControllerStyleActionSheet   UIAlertControllerStyleAlert
+    UIAlertController *alertDialog = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    // 创建操作
+    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:saveButtonTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        // 操作具体内容
+        HBBLog(@"%@",action);
+        // Nothing to do.
+        [SVProgressHUD showSuccessWithStatus:@"收藏成功..."];
+    }];
+    
+    UIAlertAction *reportAction = [UIAlertAction actionWithTitle:reportButtonTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        // 操作具体内容
+        // Nothing to do.
+        [SVProgressHUD showSuccessWithStatus:@"举报成功..."];
+        HBBFunc;
+        HBBLog(@"%@",action);
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelButtonTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        // 操作具体内容
+        // Nothing to do.
+        HBBFunc;
+        HBBLog(@"%@",action);
+    }];
+    
+    
+    // 添加操作
+    [alertDialog addAction:saveAction];
+    [alertDialog addAction:reportAction];
+    [alertDialog addAction:cancelAction];
+    
+    // 呈现警告视图
+    [self.window.rootViewController  presentViewController:alertDialog animated:YES completion:nil];
+}
+
+
+#pragma mark  -<UIActionSheetDelegate>
+
+//-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+//    
+//    HBBLog(@"%zd",buttonIndex);
+//}
+//
+//-(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
+//    
+//    
+//    if(buttonIndex == 2) return ;
+//    
+//    if([HBBLoginTool getUid] == nil) return ;
+//}
+
 
 @end

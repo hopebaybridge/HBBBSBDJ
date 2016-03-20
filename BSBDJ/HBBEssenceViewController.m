@@ -128,7 +128,7 @@
  */
 - (void)setupTitleView{
     
-    // 标签栏整体
+    // 标签栏整体   全部  视频   段子   声音 图片
     UIView *titlesView = [[UIView alloc] init];
     //    titlesView.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5];
     //    titlesView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];

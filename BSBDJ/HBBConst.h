@@ -62,3 +62,11 @@ UIKIT_EXTERN NSString *const  HBBTabBarDidSelectNotificatioin;
 UIKIT_EXTERN NSString *const  HBBSelectedControllerIndexkey;
 /** tabBar 被选中的通知 被选中的控制器 key*/
 UIKIT_EXTERN NSString *const  HBBSelectedControllerKey;
+
+
+
+/**  发布段子 -  tag 的间距 */
+UIKIT_EXTERN CGFloat const  HBBPublicWordsTagMargin;
+/**  发布段子 -  tag 的高度*/
+UIKIT_EXTERN CGFloat const  HBBPublicWordsTagHeight;
+

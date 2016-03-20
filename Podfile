@@ -1,0 +1,11 @@
+platform :ios, 8.0
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'SVProgressHUD'
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'DACircularProgress'
+pod 'pop', '~> 1.0.8'
+pod 'NJKWebViewProgress'
+#pod 'kxmovie'
+#pod 'FFmpeg','~>2.8.3'

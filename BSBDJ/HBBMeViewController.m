@@ -9,6 +9,7 @@
 #import "HBBMeViewController.h"
 #import "HBBMeCell.h"
 #import "HBBMeFooterView.h"
+#import "HBBSettingViewController.h"
 #import <MJRefresh.h>
 
 @interface HBBMeViewController ()
@@ -54,12 +55,12 @@ static NSString *HBBMeID = @"me";
 //    [self.tableView.tableFooterView setValue:@-64 forKeyPath:@"frame.origin.y"];
     
     
-    self.tableView.tableHeaderView = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshHeader)];
-    self.tableView.mj_header.hidden = YES;
-    
-    
-    self.tableView.tableFooterView  = [[HBBMeFooterView alloc] init];
-
+//    self.tableView.tableHeaderView = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshHeader)];
+//    self.tableView.mj_header.hidden = YES;
+//    
+//    
+//    self.tableView.tableFooterView  = [[HBBMeFooterView alloc] init];
+//
 
 }
 
@@ -79,7 +80,7 @@ static NSString *HBBMeID = @"me";
 }
 
 - (void)settingClick{
-//    HBBFunc;
+    [self.navigationController pushViewController:[[HBBSettingViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
 }
 
 - (void)moonClick{

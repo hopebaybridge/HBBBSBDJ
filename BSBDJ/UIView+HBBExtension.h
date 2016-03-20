@@ -19,4 +19,7 @@
 @property (nonatomic,assign)CGFloat centerY;
 
 - (BOOL)isShowingOnKeyWindow;
+
++ (instancetype)viewFromXib;
+
 @end

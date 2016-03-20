@@ -1,5 +1,5 @@
 //
-// log chinese   covert
+// log chinese   covert(日志中 uincode  -->   Chinese)
 //  Copyright (c) 2016年 HopeBayBridge. All rights reserved.
 //
 

@@ -20,8 +20,11 @@ static CGFloat const HBBSpringFactor = 10;
 
 @interface HBBPublishViewController ()
 
+/** 取消按钮*/
+@property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
+
 ///**动态文字*/
-//@property(nonatomic,strong) UIImageView *sloganView;
+@property(nonatomic,strong) UIImageView *sloganView;
 
 @end
 
@@ -72,6 +75,10 @@ static CGFloat const HBBSpringFactor = 10;
         CGFloat btnEndY = btnStartY + row * btnHeight;
         CGFloat btnBeginY =  btnEndY - HBBScreenHeight;
         
+        // 设置按钮的开始位置
+        btn.x = btnX;
+        btn.y = btnBeginY;
+        
         [self.view addSubview:btn];
         
         // 按钮的动画
@@ -95,6 +102,10 @@ static CGFloat const HBBSpringFactor = 10;
     CGFloat centerX = HBBScreenWidth * 0.5;
     CGFloat centerEndY= HBBScreenHeight * 0.2;
     CGFloat centerBeginY = centerEndY - HBBScreenHeight;
+    // 设置标语动画的开始位置
+    sloganView.centerX = centerX;
+    sloganView.centerY = centerBeginY;
+    
     anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerBeginY)];
     anim.toValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerEndY)];
     anim.springSpeed = HBBSpringFactor;
@@ -107,6 +118,9 @@ static CGFloat const HBBSpringFactor = 10;
     }];
 
     [sloganView pop_addAnimation:anim forKey:nil];
+    
+//    self.cancelBtn.imageView.image = [UIImage imageNamed:@"shareButtonCancel"];
+    //[self.view setNeedsLayout];
     
 }
 /**

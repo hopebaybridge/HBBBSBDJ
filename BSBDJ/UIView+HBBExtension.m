@@ -103,4 +103,13 @@
     return  !self.isHidden && self.alpha > 0.01 && self.window == keyWindow && intersects ;
 }
 
+/**
+ *  加载类名和模型图形一样的 xib
+ *
+ *  @return <#return value description#>
+ */
++ (instancetype)viewFromXib{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+}
+
 @end

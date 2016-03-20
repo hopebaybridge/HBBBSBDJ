@@ -216,7 +216,7 @@ static NSString *const HBBTopicIdentifier = @"topic";
 //        HBBLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-//       HBBLog(@"%@",responseObject);
+       HBBLog(@"%@",responseObject);
         
         // 网络请求迟缓  请求会一直执行  网络请求时的 params  与记录的 params不同
         if(self.params != params) return ;
