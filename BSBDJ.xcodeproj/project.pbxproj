@@ -72,6 +72,9 @@
 		4E7E06C71C621BAA00E0BDD3 /* HBBCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E7E06C51C621BAA00E0BDD3 /* HBBCommentTableViewCell.xib */; };
 		4E8463371C6606160017EE6D /* UIImage+HBBChageImageShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8463361C6606160017EE6D /* UIImage+HBBChageImageShape.m */; };
 		4E84633A1C6613BE0017EE6D /* UIImageView+HBBChageImageShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8463391C6613BE0017EE6D /* UIImageView+HBBChageImageShape.m */; };
+		4EB086441CD9A1EA003088D2 /* _____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB086431CD9A1EA003088D2 /* _____UITests.swift */; };
+		4EB0864B1CD9A34A003088D2 /* HBBMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C902C1C563A9700FA9F53 /* HBBMeViewController.m */; };
+		4EB0864D1CD9A34D003088D2 /* HBBMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C902C1C563A9700FA9F53 /* HBBMeViewController.m */; };
 		4EBF56B31C6D7F04005C2874 /* HBBAVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF56B21C6D7F04005C2874 /* HBBAVPlayer.m */; };
 		4EBF56B61C6D8100005C2874 /* HBBAVPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF56B51C6D8100005C2874 /* HBBAVPlayerItem.m */; };
 		4EBF56B91C6D81CA005C2874 /* HBBAVPlayerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF56B81C6D81CA005C2874 /* HBBAVPlayerLayer.m */; };
@@ -98,6 +101,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		4E4C8FC41C56374A00FA9F53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E4C8FA21C56374A00FA9F53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E4C8FA91C56374A00FA9F53;
+			remoteInfo = BSBDJ;
+		};
+		4EB086461CD9A1EA003088D2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4E4C8FA21C56374A00FA9F53 /* Project object */;
 			proxyType = 1;
@@ -220,6 +230,9 @@
 		4E8463361C6606160017EE6D /* UIImage+HBBChageImageShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HBBChageImageShape.m"; sourceTree = "<group>"; };
 		4E8463381C6613BE0017EE6D /* UIImageView+HBBChageImageShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HBBChageImageShape.h"; sourceTree = "<group>"; };
 		4E8463391C6613BE0017EE6D /* UIImageView+HBBChageImageShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HBBChageImageShape.m"; sourceTree = "<group>"; };
+		4EB086411CD9A1EA003088D2 /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB086431CD9A1EA003088D2 /* _____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____UITests.swift"; sourceTree = "<group>"; };
+		4EB086451CD9A1EA003088D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EBF56B11C6D7F04005C2874 /* HBBAVPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBAVPlayer.h; sourceTree = "<group>"; };
 		4EBF56B21C6D7F04005C2874 /* HBBAVPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBAVPlayer.m; sourceTree = "<group>"; };
 		4EBF56B41C6D8100005C2874 /* HBBAVPlayerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBBAVPlayerItem.h; sourceTree = "<group>"; };
@@ -282,6 +295,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EB0863E1CD9A1EA003088D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -301,6 +321,7 @@
 				4E6398B71C78A89E00E74096 /* Framework */,
 				4E4C8FAC1C56374A00FA9F53 /* BSBDJ */,
 				4E4C8FC61C56374A00FA9F53 /* BSBDJTests */,
+				4EB086421CD9A1EA003088D2 /* 百思不得姐UITests */,
 				4E4C8FAB1C56374A00FA9F53 /* Products */,
 				109EAA5D2AAA8B28DEB19D6B /* Pods */,
 				64BD283B2E3AC30E5548EB2A /* Frameworks */,
@@ -312,6 +333,7 @@
 			children = (
 				4E4C8FAA1C56374A00FA9F53 /* BSBDJ.app */,
 				4E4C8FC31C56374A00FA9F53 /* BSBDJTests.xctest */,
+				4EB086411CD9A1EA003088D2 /* 百思不得姐UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -662,6 +684,15 @@
 			name = NSTools;
 			sourceTree = "<group>";
 		};
+		4EB086421CD9A1EA003088D2 /* 百思不得姐UITests */ = {
+			isa = PBXGroup;
+			children = (
+				4EB086431CD9A1EA003088D2 /* _____UITests.swift */,
+				4EB086451CD9A1EA003088D2 /* Info.plist */,
+			);
+			path = "百思不得姐UITests";
+			sourceTree = "<group>";
+		};
 		4EF5EC521C683F26004DC1C9 /* Publish-发布 */ = {
 			isa = PBXGroup;
 			children = (
@@ -759,6 +790,24 @@
 			productReference = 4E4C8FC31C56374A00FA9F53 /* BSBDJTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4EB086401CD9A1EA003088D2 /* 百思不得姐UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB0864A1CD9A1EA003088D2 /* Build configuration list for PBXNativeTarget "百思不得姐UITests" */;
+			buildPhases = (
+				4EB0863D1CD9A1EA003088D2 /* Sources */,
+				4EB0863E1CD9A1EA003088D2 /* Frameworks */,
+				4EB0863F1CD9A1EA003088D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EB086471CD9A1EA003088D2 /* PBXTargetDependency */,
+			);
+			name = "百思不得姐UITests";
+			productName = "百思不得姐UITests";
+			productReference = 4EB086411CD9A1EA003088D2 /* 百思不得姐UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -766,6 +815,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = HBB;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = hopebaybridge;
 				TargetAttributes = {
@@ -775,6 +825,11 @@
 					};
 					4E4C8FC21C56374A00FA9F53 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 78GKMC563Q;
+						TestTargetID = 4E4C8FA91C56374A00FA9F53;
+					};
+					4EB086401CD9A1EA003088D2 = {
+						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 78GKMC563Q;
 						TestTargetID = 4E4C8FA91C56374A00FA9F53;
 					};
@@ -795,6 +850,7 @@
 			targets = (
 				4E4C8FA91C56374A00FA9F53 /* BSBDJ */,
 				4E4C8FC21C56374A00FA9F53 /* BSBDJTests */,
+				4EB086401CD9A1EA003088D2 /* 百思不得姐UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -827,6 +883,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4E4C8FC11C56374A00FA9F53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB0863F1CD9A1EA003088D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -960,6 +1023,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E4C8FC81C56374A00FA9F53 /* BSBDJTests.m in Sources */,
+				4EB0864B1CD9A34A003088D2 /* HBBMeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB0863D1CD9A1EA003088D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB086441CD9A1EA003088D2 /* _____UITests.swift in Sources */,
+				4EB0864D1CD9A34D003088D2 /* HBBMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -970,6 +1043,11 @@
 			isa = PBXTargetDependency;
 			target = 4E4C8FA91C56374A00FA9F53 /* BSBDJ */;
 			targetProxy = 4E4C8FC41C56374A00FA9F53 /* PBXContainerItemProxy */;
+		};
+		4EB086471CD9A1EA003088D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E4C8FA91C56374A00FA9F53 /* BSBDJ */;
+			targetProxy = 4EB086461CD9A1EA003088D2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1116,6 +1194,33 @@
 			};
 			name = Release;
 		};
+		4EB086481CD9A1EA003088D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = "百思不得姐UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.hopebaybridge.-----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_TARGET_NAME = BSBDJ;
+			};
+			name = Debug;
+		};
+		4EB086491CD9A1EA003088D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = "百思不得姐UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.hopebaybridge.-----UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BSBDJ;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1145,6 +1250,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4EB0864A1CD9A1EA003088D2 /* Build configuration list for PBXNativeTarget "百思不得姐UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB086481CD9A1EA003088D2 /* Debug */,
+				4EB086491CD9A1EA003088D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
