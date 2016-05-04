@@ -27,7 +27,7 @@
 {
     // 图片缓存
     NSUInteger size = [SDImageCache sharedImageCache].getSize;
-    //    XMGLog(@"%zd %@", size, NSTemporaryDirectory());
+        HBBLog(@"%zd %@", size, NSTemporaryDirectory());
     
     NSFileManager *manager = [NSFileManager defaultManager];
     
